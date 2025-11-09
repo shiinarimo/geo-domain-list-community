@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-10-31T16:27:14.311Z
-# Size: 3998
+# Last Updated: 2025-11-08T15:29:22.256Z
+# Size: 4021
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -38,6 +38,7 @@ full:assets.chaos.social
 full:medias.meow.social
 full:cdn.bsky.social
 full:objects.g0v.social
+full:static.generated.photos
 picsum.photos
 full:files.mastodon.online
 am-cdn.online
@@ -108,6 +109,7 @@ am-cdn.pics
 codeberg.page
 instant.page
 kinsta.page
+full:statics-prod.mirrordaily.news
 full:assets-next.matters.news
 full:assets.matters.news
 full:web-api-cdn.ground.news
@@ -788,6 +790,7 @@ full:static.bangumi.moe
 full:static.chaika.moe
 full:pic.cangku.moe
 full:touchgal-image.moyu.moe
+full:zzz.wxw.moe
 full:ovo.wxw.moe
 full:hv-monsterdb-data.skk.moe
 full:latency-test.skk.moe
@@ -889,6 +892,7 @@ full:assets.positional-bucket.com
 parsecusercontent.com
 notionusercontent.com
 full:navismithapis-cdn.com
+full:tour-content-cdn.kellymadisonmedia.com
 googleusercontent.com
 githubusercontent.com
 framerusercontent.com
@@ -899,6 +903,7 @@ chargebeestaticv2.com
 full:b5x-sentry.1passwordservices.com
 full:telemetry.1passwordservices.com
 full:cdn.virtuoussoftware.com
+superhumanstatic.com
 superfiliate-cdn.com
 steamusercontent.com
 spreadshirtmedia.com
@@ -914,6 +919,7 @@ full:js.braintreegateway.com
 full:jslibs.blackmagicdesign.com
 full:images.blackmagicdesign.com
 full:css.blackmagicdesign.com
+full:imgs02.aventertainments.com
 full:js.assemblyexchange.com
 full:cdn.worldvectorlogo.com
 full:cms.worldpokerdeals.com
@@ -1008,6 +1014,7 @@ full:isitmaintained.com
 full:code.ionicframework.com
 full:icons.internetbrands.com
 intercomassets.com
+images-dnxlive.com
 full:img.huffingtonpost.com
 full:images2.giant-bicycles.com
 full:static.giant-bicycles.com
@@ -1374,7 +1381,6 @@ full:cdn.fluidplayer.com
 firebaseapp.com
 full:google-ohttp-relay-safebrowsing.fastly-edge.com
 full:ohttp-relay1.fastly-edge.com
-full:apple-relay.fastly-edge.com
 full:live.fanmingming.com
 full:assets.embeddables.com
 full:cdn.dotaoutpost.com
@@ -1448,6 +1454,11 @@ vanillicon.com
 full:cdn.userreport.com
 typography.com
 full:static.typingclub.com
+full:cdn5.tubeteen18.com
+full:cdn4.tubeteen18.com
+full:cdn3.tubeteen18.com
+full:cdn2.tubeteen18.com
+full:cdn1.tubeteen18.com
 full:ecommplugins-trustboxsettings.trustpilot.com
 full:ecommplugins-scripts.trustpilot.com
 full:images-static.trustpilot.com
@@ -1587,6 +1598,8 @@ full:chart.googleapis.com
 full:ajax.googleapis.com
 full:sync.getpublica.com
 full:connect.getflowbox.com
+full:static-r2.gear4music.com
+full:r2.gear4music.com
 gayzyimage.com
 full:assets.fxnetworks.com
 full:euc-widget.freshworks.com
@@ -1638,7 +1651,6 @@ full:pplx-res.cloudinary.com
 full:res.cloudinary.com
 privacy-gateway.cloudflare.com
 csp-reporting.cloudflare.com
-full:apple-relay.cloudflare.com
 full:favicons.teams.cloudflare.com
 full:cdnjs.cloudflare.com
 full:time.cloudflare.com
@@ -1647,8 +1659,6 @@ full:static.dash.cloudflare.com
 full:ajax.cloudflare.com
 full:cf-assets.www.cloudflare.com
 nel.cloudflare.com
-full:cp4.cloudflare.com
-full:cp2.cloudflare.com
 full:imagecdn.clips4sale.com
 full:static.clips4sale.com
 full:cmd-cdn.cleanmymac.com
@@ -1883,6 +1893,7 @@ full:marber-cdn.economist.com
 full:cmp-cdn.p.aws.economist.com
 dummyjson.com
 doppiocdn.com
+full:cdn.doofinder.com
 full:assets.dnsfilter.com
 disquscdn.com
 full:us1-prod-images.disco-api.com
@@ -2104,6 +2115,7 @@ full:img.kbhgames.com
 full:cdn.jwplayer.com
 full:data.jsdelivr.com
 full:img.jsdelivr.com
+javhucdn.com
 api.instabug.com
 full:img.informer.com
 cdn.imghaste.com
@@ -2283,6 +2295,7 @@ full:api.weather.com
 wdfiles.com
 vox-cdn.com
 full:images.voguehk.com
+full:gdb.voanews.com
 full:cdn.viglink.com
 full:assets.vidyard.com
 full:play.vidyard.com
@@ -2310,6 +2323,7 @@ full:img2.tnaflix.com
 full:cdnl.tnaflix.com
 full:artworks.thetvdb.com
 full:cdn.termius.com
+full:nel.teo-rum.com
 full:wpmedia.tealium.com
 full:cdn.svgator.com
 stripst.com
@@ -2415,6 +2429,7 @@ lzzypic.com
 lzzyimg.com
 lulucdn.com
 full:img.ltyears.com
+full:img.logokit.com
 full:aurora-customization-usw2.lithium.com
 kym-cdn.com
 full:static-forms.klaviyo.com
@@ -2550,6 +2565,7 @@ full:w.chatlio.com
 cf-ipfs.com
 cdntrex.com
 cdnpure.com
+full:static.cdnlogo.com
 cdn2020.com
 cdn1122.com
 cdn-one.com
@@ -2666,6 +2682,7 @@ full:img.supjav.com
 strpst.com
 full:connect-js.stripe.com
 full:checkout.stripe.com
+full:files.stripe.com
 full:js.stripe.com
 full:heatmap-external-a.strava.com
 full:web-assets.strava.com
@@ -2916,6 +2933,8 @@ full:tiles.windy.com
 full:ims.windy.com
 full:img.windy.com
 full:images.wikia.com
+full:images.whoer.com
+full:cdn.whoer.com
 full:content.wepik.com
 full:scripts.webeo.com
 full:cdnstatic.w4nkr.com
@@ -3094,7 +3113,6 @@ full:events-delivery.apple.com
 full:lcdn-locator.apple.com
 full:news-assets.apple.com
 full:events-live.apple.com
-full:apple-relay.apple.com
 full:time.apple.com
 full:pba.apple.com
 full:static.ess.apple.com
@@ -3134,6 +3152,7 @@ full:media.user.com
 full:assets.time.com
 sirv.com
 full:cdn.sift.com
+full:attach.setn.com
 full:static.seel.com
 full:cdn.sedo.com
 www.s81c.com
@@ -3273,6 +3292,7 @@ full:consent.dw.com
 full:static.dw.com
 full:evt.24.com
 pixiv.cat
+full:a.pomf.cat
 full:oss.moe.cat
 full:ns-cdn.neustar.biz
 full:pics.mf8.biz
@@ -3347,12 +3367,14 @@ full:storage.moegirl.tw
 full:img.moegirl.tw
 full:app.moegirl.tw
 full:cf.shopee.tw
+full:statics.mnnews.tw
 full:socialpic.video.friday.tw
 full:vbmspic.video.friday.tw
 full:megapx-assets.dcard.tw
 pimg.tw
 full:news-data.pts.org.tw
 full:img-fnc.ebc.net.tw
+full:img.news.ebc.net.tw
 full:cw-image-resizer.cwg.tw
 full:cdn.ready-market.com.tw
 full:avatar2.bahamut.com.tw
@@ -3677,6 +3699,7 @@ full:cdn.metadata.io
 full:cdn.jetboost.io
 full:widget.intercom.io
 ik.imagekit.io
+full:icon.icepanel.io
 ipfs.denarius.io
 rum.cronitor.io
 full:cdn.commento.io
