@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-11-08T15:29:22.256Z
-# Size: 4021
+# Last Updated: 2025-11-14T20:11:06.906Z
+# Size: 4049
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -47,6 +47,7 @@ full:code.iconify.design
 full:api.iconify.design
 ant.design
 full:fonts1.unidays.world
+full:tubi.video
 full:img.api.video
 full:namedotcom-cdn.name.tools
 full:pics.javhd.today
@@ -91,6 +92,7 @@ dsc.cloud
 full:static.bit.cloud
 full:cdn.bigcloud.click
 full:turbo.build
+lllcdn.autos
 safebrowsing.apple
 full:img.itch.zone
 ipfs.litnet.work
@@ -98,6 +100,7 @@ full:static.frame.work
 full:tn.txxx.tube
 full:js.txxx.tube
 full:ipfs.d.tube
+full:media.remax-prod.eng.remax.tech
 full:packages.jetbrains.team
 full:pkg-cdn.jetbrains.team
 zenwave56.site
@@ -136,7 +139,6 @@ full:image.theblockbeats.info
 full:lm.visualon.info
 myvideos.info
 full:cdn.adguard.info
-full:static.javcdn.info
 full:busuanzi.ibruce.info
 gdvid.info
 ddpic.info
@@ -423,7 +425,6 @@ fimfiction-static.net
 hscollectedforms.net
 reasoningtheory.net
 full:static-r.kamihimeproject.net
-full:static-assets.freeanimehentai.net
 azurestaticapps.net
 full:assets.visioncritical.net
 full:vscode-sync-insiders.trafficmanager.net
@@ -450,6 +451,7 @@ full:blacklist.tampermonkey.net
 full:cdn.sapphire.microsoftapp.net
 full:static.edge.microsoftapp.net
 f.hubspotemail.net
+directupload.net
 coral.coralproject.net
 blackbaudcdn.net
 storage.yandexcloud.net
@@ -511,6 +513,7 @@ full:bundler.nice-team.net
 line-scdn.net
 klarnacdn.net
 intuitcdn.net
+full:img.imoutomoe.net
 image8899.net
 futurecdn.net
 flagpedia.net
@@ -682,6 +685,7 @@ public.cdn.office.net
 full:shell.cdn.office.net
 mxmcdn.net
 full:az700632.vo.msecnd.net
+full:alcdn.msauth.net
 mjedge.net
 mercdn.net
 full:images.mattel.net
@@ -698,7 +702,7 @@ full:lastfm.freetls.fastly.net
 full:brick.freetls.fastly.net
 full:brick.a.ssl.fastly.net
 eroimg.net
-full:assets.dwncdn.net
+dwncdn.net
 dlunar.net
 full:screenshots.debian.net
 cdn.cwinfo.net
@@ -800,7 +804,6 @@ full:img.skk.moe
 cdn.skk.moe
 full:objects.hit.moe
 full:assets-cdn.anh.moe
-full:cdn.amh.moe
 cloudflare.ltd
 full:static.coinall.ltd
 full:image.acg.lol
@@ -912,6 +915,7 @@ full:cdn.seonintelligence.com
 full:assets4.mist-train-girls.com
 full:hubspotonwebflow.com
 googleadservices.com
+dolphin-anty-cdn.com
 cloudflarestream.com
 full:static.captcha-delivery.com
 full:assets.braintreegateway.com
@@ -1072,9 +1076,11 @@ full:pbs-prod.linustechtips.com
 full:cwsimages.ingramcontent.com
 full:media-central.indianexpress.com
 full:images.indianexpress.com
+images-amazon.com
 highwinds-cdn.com
 full:cdn.heapanalytics.com
 full:sig.grumpybumpers.com
+full:media-hls.growcdnssedge.com
 full:app.groovefunnels.com
 full:telemetry.individual.githubcopilot.com
 full:telemetry.business.githubcopilot.com
@@ -1177,6 +1183,7 @@ kinja-static.com
 jinyingimage.com
 full:spcdn.incartupsell.com
 img-dpreview.com
+full:cdn.imago-images.com
 images-iherb.com
 full:cdn1.identitymind.com
 hubspotlinks.com
@@ -1217,6 +1224,7 @@ full:assets.clever-cloud.com
 full:cdn.clever-cloud.com
 full:static.chrome-stats.com
 cdninstagram.com
+capcutstatic.com
 full:cdnjs.buymeacoffee.com
 full:cdn.buymeacoffee.com
 full:bundlephobia.com
@@ -1531,6 +1539,7 @@ full:tags.nationwide.com
 myspacecdn.com
 full:r2cdn.myshopline.com
 myshopapps.com
+full:cdn.myfutanari.com
 myfilebase.com
 msftstatic.com
 media-imdb.com
@@ -1695,6 +1704,7 @@ anpoimages.com
 algolianet.com
 full:static.adguardvpn.com
 adguardcdn.com
+full:static.3dporndude.com
 full:cdn.zhujiwiki.com
 full:assets.zerohedge.com
 xhpingcdn.com
@@ -1825,9 +1835,11 @@ full:static.macupdate.com
 full:images.macrumors.com
 lr-ingest.com
 lowendbox.com
+full:cdn.lineicons.com
 full:scdn.line-apps.com
 full:cdn.lgrckt-in.com
 kinja-img.com
+full:images.justwatch.com
 full:cdn.joypixels.com
 full:cdn.joinhoney.com
 jisuimage.com
@@ -2244,6 +2256,8 @@ full:cdn.amcharts.com
 full:oaos-resources.allstate.com
 contenthub.allstate.com
 full:resources.allstate.com
+full:fastly-gce.allmovie.com
+full:fastly-s3.allmovie.com
 full:static.airtable.com
 full:img-5-cdn.airdroid.com
 full:img-4-cdn.airdroid.com
@@ -2294,7 +2308,7 @@ full:widgets.media.weather.com
 full:api.weather.com
 wdfiles.com
 vox-cdn.com
-full:images.voguehk.com
+full:img.voguehk.com
 full:gdb.voanews.com
 full:cdn.viglink.com
 full:assets.vidyard.com
@@ -2373,6 +2387,9 @@ full:cdn77-t.pornoxo.com
 full:cdn77.pornoxo.com
 full:pics.pornfhd.com
 full:celebrities-small.porndig.com
+full:cdn-static-push.porndig.com
+full:image-cdn.porndig.com
+full:assets.porndig.com
 full:m.porn3dx.com
 full:pbcdn1.podbean.com
 full:png.pngtree.com
@@ -2417,6 +2434,7 @@ full:firefox.settings.services.mozilla.com
 push.services.mozilla.com
 full:cdn.sso.mozilla.com
 full:static.moonpay.com
+full:cdn.moeload.com
 full:static.moegoat.com
 full:images.moegoat.com
 mktgcdn.com
@@ -2443,6 +2461,7 @@ full:files.jotform.com
 full:js.jotform.com
 full:pool.jortage.com
 full:blob.jortage.com
+full:img.javynow.com
 full:img4.javmost.com
 full:img3.javmost.com
 full:img2.javmost.com
@@ -2559,8 +2578,6 @@ cmail20.com
 cmail19.com
 full:data.web.clickup.com
 full:image.civitai.com
-full:assets.chess24.com
-full:cdn.chess24.com
 full:w.chatlio.com
 cf-ipfs.com
 cdntrex.com
@@ -2622,7 +2639,6 @@ full:cdn.zapier.com
 full:static.zaobao.com
 ypncdn.com
 full:rapid-cdn.yottaa.com
-full:content-cdn.y2mate.com
 full:cdn.xvidzz.com
 full:img.xhacgn.com
 full:website-prod.cache.wpscdn.com
@@ -2661,6 +2677,7 @@ full:cdn-cms.tunein.com
 full:static.tumblr.com
 assets.tumblr.com
 media.tumblr.com
+full:canvas-lb.tubitv.com
 full:cdn2.ttloli.com
 full:cdn.ttloli.com
 full:cdn.tracxn.com
@@ -2730,6 +2747,9 @@ cdn.pubnub.com
 prppsn.com
 full:static.probit.com
 prhcdn.com
+full:cdn-3.porn87.com
+full:cdn-2.porn87.com
+full:cdn-1.porn87.com
 full:assets.pixlee.com
 pinimg.com
 phncdn.com
@@ -2913,6 +2933,7 @@ full:cdn1.affirm.com
 assets.adidas.com
 glass.adidas.com
 9cache.com
+full:img.321cdn.com
 full:static.zuora.com
 full:barracuda-assets.zoovu.com
 full:barracuda-cdn.zoovu.com
@@ -2951,6 +2972,7 @@ twimg.com
 full:media1.tenor.com
 full:media.tenor.com
 full:c.tadst.com
+t8cdn.com
 full:assets.stash.com
 full:cdn.stash.com
 srcdn.com
@@ -2958,6 +2980,7 @@ full:cdn.sprig.com
 full:files.slack.com
 sb-cd.com
 rlcdn.com
+full:static-images.remax.com
 full:s2.qwant.com
 full:s1.qwant.com
 full:js.puter.com
@@ -3140,6 +3163,8 @@ full:assets.play.xbox.com
 full:livemap-tiles1.waze.com
 full:web-assets.waze.com
 full:cdnstatic.w1mp.com
+full:images2.vudu.com
+full:images.vudu.com
 full:cdn.vnoc.com
 full:tn.vjav.com
 full:vice-web-statics-cdn.vice.com
@@ -3367,7 +3392,6 @@ full:storage.moegirl.tw
 full:img.moegirl.tw
 full:app.moegirl.tw
 full:cf.shopee.tw
-full:statics.mnnews.tw
 full:socialpic.video.friday.tw
 full:vbmspic.video.friday.tw
 full:megapx-assets.dcard.tw
@@ -3393,16 +3417,20 @@ full:p.udn.com.tw
 full:j.udn.com.tw
 full:imgcdn.cna.com.tw
 full:cloudflare.tv
-full:cdn.vidible.tv
 full:cdn1.hotmoza.tv
 full:clips-media-assets2.twitch.tv
 full:assets.twitch.tv
 full:embed.twitch.tv
 storry.tv
+full:static.tella.tv
+full:static-homepage-en.pluto.tv
 full:images.pluto.tv
 full:assets-cdn.jable.tv
 full:assetscdn.jable.tv
 full:assets.jable.tv
+full:himeko.iwara.tv
+full:files.iwara.tv
+full:clara.iwara.tv
 full:i.iwara.tv
 full:imgcn5.bgmbk.tv
 full:imgcn4.bgmbk.tv
@@ -3411,6 +3439,7 @@ full:imgcn2.bgmbk.tv
 full:imgcn.bgmbk.tv
 full:cdn.18jav.tv
 full:static.yfsp.tv
+full:mcdn.tubi.tv
 full:s-cdnstatic.svc.litv.tv
 full:p-cdnstatic.svc.litv.tv
 full:jsmodule.svc.litv.tv
@@ -3546,7 +3575,6 @@ full:emoji-css.afeld.me
 full:pic.7mmtv.me
 full:cdn.123av.me
 full:rsms.me
-full:img.jjbb.me
 full:s4.itho.me
 full:static.fbot.me
 full:media.e4le.me
@@ -3680,7 +3708,6 @@ full:static.tokenview.io
 full:assets.keysquare.io
 full:media.hachyderm.io
 full:static.getbutton.io
-full:thingproxy.freeboard.io
 crossbell.io
 corsproxy.io
 full:sandpack-cdn-staging.blazingly.io
@@ -4021,6 +4048,7 @@ full:cdn.candy.ai
 telemetry.services.yofi.ai
 full:cdn2.suno.ai
 full:cdn1.suno.ai
+full:cdn.roof.ai
 full:metrics.kapa.ai
 full:widget.kapa.ai
 full:cdn.fera.ai
