@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-11-29T08:15:20.314Z
-# Size: 4106
+# Last Updated: 2025-12-04T16:41:18.381Z
+# Size: 4111
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -679,6 +679,8 @@ full:static.vocadb.net
 full:images1.vinted.net
 full:craftassets.unraid.net
 full:components.trynow.net
+full:lzd-img-global.slatic.net
+full:icms-image.slatic.net
 sftcdn.net
 rspcdn.net
 redcdn.net
@@ -2370,6 +2372,7 @@ full:cdnl.tnaflix.com
 full:artworks.thetvdb.com
 full:cdn.termius.com
 full:nel.teo-rum.com
+full:upload.teftera.com
 full:wpmedia.tealium.com
 full:cdn.svgator.com
 stripst.com
@@ -2863,6 +2866,7 @@ lodash.com
 locimg.com
 full:staging-pubfeed.linkby.com
 full:ledger-wp-website-s3-prd.ledger.com
+lazcdn.com
 full:assets-cms.kraken.com
 full:assets.kraken.com
 full:public.komiic.com
@@ -3263,6 +3267,7 @@ full:assets.goat.com
 full:image.goat.com
 fsdn.com
 full:images.dmca.com
+full:website-media.deel.com
 full:sf-coze-web-cdn.coze.com
 full:zephr-templates.cnbc.com
 full:production-cmp.isgprivacy.cbsi.com
