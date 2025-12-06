@@ -4,14 +4,17 @@ include:bluearchive
 include:curseforge
 include:cygames
 include:ea
+include:embark
 include:epicgames
 include:escapefromtarkov
+include:faceit
 include:garena
 include:gog
 include:hoyoverse
 include:illusion
 include:itchio
 include:lowiro
+include:modrinth
 include:nexon
 include:nikke
 include:nintendo
@@ -44,7 +47,6 @@ humblebundle.com
 joinsquad.com
 loverslab.com
 minecraft.wiki
-modrinth.com
 nexusmods.com
 offworldindustries.com
 offworldindustries.net
