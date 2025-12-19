@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-12-13T20:11:02.527Z
-# Size: 4133
+# Last Updated: 2025-12-18T09:19:04.386Z
+# Size: 4153
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -9,6 +9,7 @@
 # This file contains object storage and static assets CDN domains.
 #########################################
 full:7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
+full:website-media
 static.microsoft
 full:cdn.arcade.software
 full:media.infosec.exchange
@@ -50,6 +51,7 @@ full:fonts1.unidays.world
 full:tubi.video
 full:img.api.video
 full:namedotcom-cdn.name.tools
+full:openreplay-new.deel.tools
 full:pics.javhd.today
 eth.sucks
 full:vanilla-extract.style
@@ -108,6 +110,7 @@ full:res2.weblium.site
 full:nextra.site
 full:p.inari.site
 full:imgfile.shop
+full:placeholder.pics
 am-cdn.pics
 codeberg.page
 instant.page
@@ -838,6 +841,7 @@ usercontent.dev
 full:tuf-repo-cdn.sigstore.dev
 full:pkg-size.dev
 full:cdn-web.orbstack.dev
+full:logos.composio.dev
 workers.dev
 skypack.dev
 angular.dev
@@ -1046,6 +1050,7 @@ datocms-assets.com
 customeriomail.com
 crunchyrollcdn.com
 colliderimages.com
+betterstackcdn.com
 b2c-contenthub.com
 full:cdn.answeroverflow.com
 alonestreaming.com
@@ -1768,6 +1773,7 @@ full:ui.trailhead.com
 full:hawk.tomsguide.com
 tokyvideo.com
 tnastatic.com
+tinifycdn.com
 tiktokcdn.com
 full:thumbsnap.com
 thisiscdn.com
@@ -1934,6 +1940,7 @@ full:cdn1.epicgames.com
 full:talon-website-prod.ecosec.on.epicgames.com
 full:epic-social-social-modules-prod.ol.epicgames.com
 ensighten.com
+full:assets.endorsely.com
 embedgram.com
 design-system.economist.com
 full:marber-cdn.economist.com
@@ -1959,6 +1966,7 @@ full:webstatic.chargebee.com
 full:js1.chargebee.com
 full:js.chargebee.com
 full:cdn.changelog.com
+cdn-plain.com
 full:sequoia.cdn-apple.com
 full:doppler-config.cbsivideo.com
 full:www-res.cablelabs.com
@@ -2079,6 +2087,7 @@ full:source.roboflow.com
 full:cdn.roboflow.com
 full:app.roboflow.com
 full:api.roboflow.com
+full:prod-images.rippling.com
 full:staticsource1.redotpay.com
 full:redircdn.com
 full:cacerts.rapidssl.com
@@ -2157,6 +2166,7 @@ lowescdn.com
 full:media.loom-app.com
 full:linkstorage.linkfire.com
 full:services.linkfire.com
+full:media.letsdeel.com
 full:static-lccn.leetcode.com
 full:assets.leetcode.com
 full:cdn.leandata.com
@@ -2327,6 +2337,7 @@ zohocdn.com
 full:cdn.zigpoll.com
 media.zestyio.com
 full:web-assets.zendesk.com
+full:assets.zendesk.com
 full:img.youtube.com
 full:cdne-pics.youjizz.com
 yelpcdn.com
@@ -2486,6 +2497,8 @@ full:images.moegoat.com
 mktgcdn.com
 mintcdn.com
 full:image.mgstage.com
+full:acdn.mercury.com
+full:cdn.mercury.com
 full:static.maxmind.com
 full:img-cos.mandaoo.com
 full:assets.mailgun.com
@@ -3280,7 +3293,6 @@ full:assets.goat.com
 full:image.goat.com
 fsdn.com
 full:images.dmca.com
-full:website-media.deel.com
 full:sf-coze-web-cdn.coze.com
 full:zephr-templates.cnbc.com
 full:production-cmp.isgprivacy.cbsi.com
@@ -3393,6 +3405,7 @@ full:a.pomf.cat
 full:oss.moe.cat
 full:ns-cdn.neustar.biz
 full:pics.mf8.biz
+full:static.sdkassets.chime.aws
 ipfs.kaleido.art
 full:disco-static.productessentials.app
 full:cdn.giftcardpro.app
@@ -3421,6 +3434,7 @@ full:e.linear.app
 giscus.app
 udify.app
 tauri.app
+full:chat-assets.front.app
 xlog.app
 full:cdn.rive.app
 full:web-cdn.bsky.app
@@ -3433,6 +3447,7 @@ full:cdn.24.co.za
 ipfs.yt
 full:s.pacn.ws
 imageshack.us
+full:appstatico.electronic.us
 full:cdn.donmai.us
 full:us01ccistatic.zoom.us
 full:eu01ccistatic.zoom.us
@@ -3635,6 +3650,7 @@ javplayer.me
 dnvodcdn.me
 full:cdn.daradara.me
 full:cf.javfree.me
+full:circle-flags.zeljko.me
 full:cdn.picrew.me
 full:cdn.glitch.me
 full:static.start.me
@@ -3682,6 +3698,7 @@ full:img3.yna.co.kr
 full:img2.yna.co.kr
 full:img1.yna.co.kr
 full:img0.yna.co.kr
+full:img.yna.co.kr
 full:media.cmx.edu.kg
 misskeyusercontent.jp
 edge.storage-yahoo.jp
@@ -3787,6 +3804,8 @@ full:media.hachyderm.io
 full:static.getbutton.io
 crossbell.io
 corsproxy.io
+full:r2cdn.corespeed.io
+full:assets.mcp.corespeed.io
 full:sandpack-cdn-staging.blazingly.io
 bitbucket.io
 full:img.badgesize.io
@@ -4003,6 +4022,7 @@ full:cdn.prod.www.spiegel.de
 full:www.acgpix.de
 full:cdn.ionos.de
 ipfs.slang.cx
+full:assets.openalternative.co
 full:cdn.stackoverflow.co
 cdn-lfs-us-1.huggingface.co
 cdn-uploads.huggingface.co
