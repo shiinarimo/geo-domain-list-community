@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-12-18T09:19:04.386Z
-# Size: 4153
+# Last Updated: 2025-12-20T14:01:57.067Z
+# Size: 4159
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1440,6 +1440,7 @@ full:cloudfront.codeproject.com
 cloudatacdn.com
 cdn-website.com
 full:events.ld.catamorphic.com
+cartastatic.com
 full:cdn.calibermind.com
 full:e.calibermind.com
 bstarstatic.com
@@ -2742,6 +2743,7 @@ full:backinstock.useamp.com
 devrum.uptime.com
 full:api.unisvg.com
 assets.ubuntu.com
+full:i.typlog.com
 full:widgets.turnto.com
 cdn.turner.com
 full:cdn-web.tunein.com
@@ -2777,6 +2779,7 @@ full:heatmap-external-a.strava.com
 full:web-assets.strava.com
 full:content-a.strava.com
 full:cdn-1.strava.com
+full:cdn.stonly.com
 ss-cdn.com
 sndimg.com
 sndcdn.com
@@ -3257,6 +3260,7 @@ full:static.v2ex.com
 full:cdn.v2ex.com
 full:widget.user.com
 full:media.user.com
+full:prd-www-cdn.ubnt.com
 full:assets.time.com
 sirv.com
 full:cdn.sift.com
@@ -3407,6 +3411,7 @@ full:ns-cdn.neustar.biz
 full:pics.mf8.biz
 full:static.sdkassets.chime.aws
 ipfs.kaleido.art
+full:img.fzf404.art
 full:disco-static.productessentials.app
 full:cdn.giftcardpro.app
 full:do.featurebase.app
@@ -3799,6 +3804,7 @@ bigcontent.io
 wixstudio.io
 full:cdn.transcend.io
 full:static.tokenview.io
+full:cdn.simplesat.io
 full:assets.keysquare.io
 full:media.hachyderm.io
 full:static.getbutton.io
