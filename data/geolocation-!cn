@@ -31,6 +31,8 @@ include:typenetwork
 include:typography
 include:webtype
 
+bunka.go.jp
+
 # Automobile
 include:bmw
 include:bridgestone
@@ -161,6 +163,7 @@ include:category-enhance-gaming
 include:category-mobile-repair
 include:category-ntp
 include:category-password-management
+include:category-web-archive
 include:decryptipastore # iOS
 
 include:rsshub
@@ -320,5 +323,5 @@ include:windy
 include:xdty
 include:xingrz
 
-# 沉浸式翻译
+# 沉浸式翻译 (国际版)
 immersivetranslate.com
