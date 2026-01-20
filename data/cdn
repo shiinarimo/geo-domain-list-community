@@ -8,7 +8,6 @@
 #
 # This file contains object storage and static assets CDN domains.
 #########################################
-full:7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 static.microsoft
 full:cdn.arcade.software
 full:media.infosec.exchange
