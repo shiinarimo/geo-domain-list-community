@@ -50,9 +50,10 @@ jobs:
           # sed -i 's/\+\.//g' cdn
           # sed -i '/^[+.#]/!{/^$/! s/^/full:/}; s/\+\.//g' cdn
 
+          # 修改main.go后不再需要删除下划线
           # 删除 cdn和skk-reject 里所有包含 '_' 的行（严格域名模式下都不合法）
-          sed -i '/_/d' data/cdn
-          sed -i '/_/d' data/skk-reject
+          # sed -i '/_/d' data/cdn
+          # sed -i '/_/d' data/skk-reject
 
           sed -i '/^\+\./{s/^\+\.\(.*\)/\1/;b};/^#/b;/^$/b;s/^/full:/' cdn
           sed -i 's/+\.//g' gfw
@@ -80,9 +81,10 @@ jobs:
           mv dns-1stream-jp data/
           mv dns-1stream-tw data/
           
+          # 修改main.go后不再需要删除下划线
           # 删除 cdn和skk-reject 里所有包含 '_' 的行（严格域名模式下都不合法）
-          sed -i '/_/d' data/cdn
-          sed -i '/_/d' data/skk-reject
+          # sed -i '/_/d' data/cdn
+          # sed -i '/_/d' data/skk-reject
 
       - name: Commit changes
         working-directory: code

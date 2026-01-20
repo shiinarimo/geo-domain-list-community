@@ -31,7 +31,9 @@ const (
 
 var (
 	TypeChecker  = regexp.MustCompile(`^(domain|full|keyword|regexp|include)$`)
-	ValueChecker = regexp.MustCompile(`^[a-z0-9!\.-]+$`)
+	// ValueChecker = regexp.MustCompile(`^[a-z0-9!\.-]+$`)
+	// 放宽验证，允许下划线等字符，以支持非常规域名
+	ValueChecker = regexp.MustCompile(`^[a-z0-9!._-]+$`)
 	AttrChecker  = regexp.MustCompile(`^[a-z0-9!-]+$`)
 	SiteChecker  = regexp.MustCompile(`^[A-Z0-9!-]+$`)
 )
