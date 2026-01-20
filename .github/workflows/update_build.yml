@@ -49,11 +49,10 @@ jobs:
         run: |
           # sed -i 's/\+\.//g' cdn
           # sed -i '/^[+.#]/!{/^$/! s/^/full:/}; s/\+\.//g' cdn
-          
-          # 编译冲突，不得不移除这些域名
-          # 感谢 Sukka 提供与维护的规则
-          sed -i '/7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset\.skk\.moe/d' cdn
-          sed -i '/7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset\.skk\.moe/d' skk-reject
+
+          # 删除 cdn和skk-reject 里所有包含 '_' 的行（严格域名模式下都不合法）
+          sed -i '/_/d' cdn
+          sed -i '/_/d' skk-reject
 
           sed -i '/^\+\./{s/^\+\.\(.*\)/\1/;b};/^#/b;/^$/b;s/^/full:/' cdn
           sed -i 's/+\.//g' gfw
