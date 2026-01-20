@@ -6,7 +6,7 @@ include:gracg
 include:hupu
 include:meipian
 include:okjike
-include:sina
+include:sina @-!cn
 include:xiaohongshu
 include:yy
 include:zhihu
@@ -21,3 +21,6 @@ dandanvoice.com
 # 脉脉
 maimai.cn
 taou.com
+
+# 知识星球
+zsxq.com
