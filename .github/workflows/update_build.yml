@@ -50,6 +50,10 @@ jobs:
           # sed -i 's/\+\.//g' cdn
           # sed -i '/^[+.#]/!{/^$/! s/^/full:/}; s/\+\.//g' cdn
 
+          # 删除 cdn和skk-reject 里所有包含 '_' 的行（严格域名模式下都不合法）
+          sed -i '/_/d' data/cdn
+          sed -i '/_/d' data/skk-reject
+
           sed -i '/^\+\./{s/^\+\.\(.*\)/\1/;b};/^#/b;/^$/b;s/^/full:/' cdn
           sed -i 's/+\.//g' gfw
           # sed -i 's/\+\.//g' skk-reject
