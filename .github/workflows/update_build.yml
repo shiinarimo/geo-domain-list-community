@@ -43,7 +43,7 @@ jobs:
         run: |
           # sed -i 's/\+\.//g' cdn
           # sed -i '/^[+.#]/!{/^$/! s/^/full:/}; s/\+\.//g' cdn
-          sed '/^7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset\.skk\.moe$/d' cdn
+          sed -i '/7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset\.skk\.moe/d' cdn
           sed -i '/^\+\./{s/^\+\.\(.*\)/\1/;b};/^#/b;/^$/b;s/^/full:/' cdn
           sed -i 's/+\.//g' gfw
           # sed -i 's/\+\.//g' skk-reject
