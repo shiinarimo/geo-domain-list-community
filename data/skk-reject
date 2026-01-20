@@ -12,10 +12,6 @@
 #   - https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/GameConsoleAdblockList.txt
 #   - https://cdn.jsdelivr.net/gh/jerryn70/GoodbyeAds@master/Extension/GoodbyeAds-Xiaomi-Extension.txt
 #   - https://easylist.to/easylist/easyprivacy.txt
-#   - https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt
-#   - https://filters.adtidy.org/extension/ublock/filters/224_optimized.txt
-#   - https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt
-#   - https://filters.adtidy.org/extension/ublock/filters/3_optimized.txt
 #   - https://ublockorigin.github.io/uAssetsCDN/filters/unbreak.min.txt
 #########################################
 connect.delphi.international
@@ -12185,7 +12181,6 @@ b7tp47v2nb3x-a.akamaihd.net
 3j0pw4ed7uac-a.akamaihd.net
 pxlgnpgecom-a.akamaihd.net
 qnajplxtvz-a.akamaihd.net
-fb_servpub-a.akamaihd.net
 inmobisdk-a.akamaihd.net
 hdapp1008-a.akamaihd.net
 hdapp1003-a.akamaihd.net
@@ -49577,7 +49572,6 @@ h5log.zongheng.com
 log.zongheng.com
 zmjagawa.com
 gw-usa-tracker.zmaticoo.com
-imp_track.zmaticoo.com
 tracker.zmaticoo.com
 zkraktak.com
 s.zixuntop.com
@@ -77923,7 +77917,6 @@ a8.ryugaku.kuraveil.jp
 a8.kekkon.kuraveil.jp
 adtrack.kireibiz.jp
 umiaob.kireibiz.jp
-piano_log.kingsoft.jp
 shtrack.kingsoft.jp
 stat-ssl.kinarino.jp
 a8cvhoiku.kidsmate.jp
