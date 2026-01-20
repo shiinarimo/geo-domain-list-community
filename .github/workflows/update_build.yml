@@ -25,39 +25,48 @@ jobs:
           path: code
 
       - name: Download cdn.txt
+        working-directory: code
         run: curl -o cdn https://ruleset.skk.moe/Clash/domainset/cdn.txt
 
       - name: Download list gfw
+        working-directory: code
         run: curl -o gfw https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.list
 
       - name: Download list anti-ad
+        working-directory: code
         run: curl -o anti-ad https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
 
       - name: Download list skk reject base
+        working-directory: code
         run: curl -o skk-reject https://ruleset.skk.moe/Clash/domainset/reject.txt
 
       - name: Download list from 1-stream/1stream-public-utils
+        working-directory: code
         run: curl -o dns-1stream https://raw.githubusercontent.com/1-stream/1stream-public-utils/refs/heads/main/stream.text.list
 
       - name: Remove "+." characters
+        working-directory: code
         run: |
           # sed -i 's/\+\.//g' cdn
           # sed -i '/^[+.#]/!{/^$/! s/^/full:/}; s/\+\.//g' cdn
-          sed -i '/7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset\.skk\.moe/d' cdn
+          sed '/^7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset\.skk\.moe$/d' cdn
           sed -i '/^\+\./{s/^\+\.\(.*\)/\1/;b};/^#/b;/^$/b;s/^/full:/' cdn
           sed -i 's/+\.//g' gfw
           # sed -i 's/\+\.//g' skk-reject
           sed -i '/^[+.#]/!{/^$/! s/^/full:/}; s/\+\.//g' skk-reject
 
       - name: Media area from 1-stream
+        working-directory: code
         run: |
           sed -n '/# ---------- > Japan Media/,/# ---------- >/p' dns-1stream | sed '$d' > dns-1stream-jp
           sed -n '/# ---------- > Taiwan Media/,/# ---------- >/p' dns-1stream | sed '$d' > dns-1stream-tw
 
       - name: Create data directory if it doesn't exist
+        working-directory: code
         run: mkdir -p data
 
       - name: Move file to data directory
+        working-directory: code
         run: |
           mv cdn data/
           mv gfw data/
@@ -68,6 +77,7 @@ jobs:
           mv dns-1stream-tw data/
 
       - name: Commit changes
+        working-directory: code
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
