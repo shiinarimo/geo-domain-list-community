@@ -15,8 +15,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update_rules:
-    name: Update rules
+  update_build:
+    name: Update and Build geosite.dat
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -101,16 +101,8 @@ jobs:
           git commit -m 'Update cdn and removing "+." characters'
           git push origin master
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout codebase
-        uses: actions/checkout@v6
-        with:
-          path: code
-
+      # Build geosite.dat   
       - name: Setup Go
         uses: actions/setup-go@v6
         with:
