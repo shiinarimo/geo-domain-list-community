@@ -170,7 +170,8 @@ func parseEntry(line string) (Entry, error) {
 func validateDomainChars(domain string) bool {
 	for i := range domain {
 		c := domain[i]
-		if (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.' || c == '-' {
+		if (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.' || c == '-' || c == '_' {
+			//放宽域名中的下划线限制
 			continue
 		}
 		return false
