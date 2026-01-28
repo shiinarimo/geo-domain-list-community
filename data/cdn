@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-01-20T09:57:26.119Z
-# Size: 4232
+# Last Updated: 2026-01-28T08:24:13.081Z
+# Size: 4263
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -213,6 +213,7 @@ picjs.xyz
 chcdn.xyz
 full:cdn-longterm.mee6.xyz
 full:vod.jfly.xyz
+full:sdk-cdn.fun.xyz
 full:img.hentaihaven.xxx
 imhentai.xxx
 full:i.xozilla.xxx
@@ -481,6 +482,7 @@ full:sourcemaps.squarespace.net
 full:static-resource.np.community.playstation.net
 full:akamai-origin.myanimelist.net
 full:cdn.myanimelist.net
+full:sdk-static.loyaltylion.net
 full:sdk.loyaltylion.net
 f.hubspotfree.net
 hsappstatic.net
@@ -854,6 +856,7 @@ usercontent.dev
 full:tuf-repo-cdn.sigstore.dev
 full:pkg-size.dev
 full:cdn-web.orbstack.dev
+full:storybooks.fluentui.dev
 full:logos.composio.dev
 workers.dev
 skypack.dev
@@ -1093,6 +1096,7 @@ full:js.verygoodvault.com
 transcend-cdn.com
 bundle.thimatic-apps.com
 full:cdn.thewirecutter.com
+full:files.thehackernews.com
 full:cdn.stellarhosted.com
 steemitimages.com
 full:assets.static-upwork.com
@@ -1148,6 +1152,7 @@ full:images8.design-editor.com
 full:images7.design-editor.com
 full:images.design-editor.com
 full:assets.cyberghostvpn.com
+full:storage.courtlistener.com
 full:s3.cointelegraph.com
 full:academy-public.coinmarketcap.com
 full:s3.coinmarketcap.com
@@ -1244,6 +1249,7 @@ full:rest.happierleads.com
 full:cdn.googlesource.com
 githubassets.com
 full:m3u8.girigirilove.com
+getaroom-cdn.com
 framerstatic.com
 full:static.filestackapi.com
 full:staticm.fastcomments.com
@@ -1307,6 +1313,7 @@ full:app.viral-loops.com
 full:vectorified.com
 full:static-cdn.usertesting.com
 js.usemessages.com
+full:usehooks-ts.com
 full:asset-cdn.uscardforum.com
 full:www-cdn.uscardforum.com
 full:psp-logos.uptimerobot.com
@@ -1554,6 +1561,7 @@ full:img.sparknotes.com
 full:w.soundcloud.com
 full:static.solarwinds.com
 full:rum-agent.na-01.cloud.solarwinds.com
+full:cdn.snaptravel.com
 full:webappassets.smartsheet.com
 slack-imgs.com
 slack-edge.com
@@ -1565,6 +1573,7 @@ full:pics2.serviporno.com
 full:pics.serviporno.com
 cdn.serverable.com
 sentry-cdn.com
+full:static-www.sendsafely.com
 full:assets.sendinblue.com
 sbcdnvideo.com
 full:resources.help.salesforce.com
@@ -1591,6 +1600,7 @@ full:images1.cmp.optimizely.com
 cdn.optimizely.com
 full:static.openreplay.com
 full:static-www.onlyoffice.com
+full:assets.northflank.com
 nincontent.com
 full:cdn.nerdschalk.com
 full:cdn.app.neononepay.com
@@ -1827,6 +1837,7 @@ proxy2.startpage.com
 proxy1.startpage.com
 proxy.startpage.com
 full:content-prod-live.cert.starbucks.com
+ss-domain.com
 full:rs-cdn.splashtop.com
 full:static.spankbang.com
 full:lecontent.sololearn.com
@@ -1859,6 +1870,7 @@ rawgithub.com
 siteintercept.qualtrics.com
 full:jfe-cdn.qualtrics.com
 full:js.qualified.com
+full:plugins.pubtailer.com
 full:vpncdn.protonweb.com
 full:pmecdn.protonweb.com
 full:content.powerapps.com
@@ -2018,6 +2030,7 @@ bitgetimg.com
 full:upos-sz-mirrorcosbstar1.bilivideo.com
 full:upos-sz-mirroralibstar1.bilivideo.com
 full:secure.beer7live.com
+bbystatic.com
 full:cdn.babylonjs.com
 awsstatic.com
 full:atl-global.atlassian.com
@@ -2028,6 +2041,7 @@ assettype.com
 aspnetcdn.com
 appmifile.com
 anyhentai.com
+full:www-cdn.anthropic.com
 full:s-cdn.anthropic.com
 full:a-cdn.anthropic.com
 ipfs.anonymize.com
@@ -2237,6 +2251,7 @@ full:snippet.growsumo.com
 widget.cluster.groovehq.com
 gravatar.com
 full:cdn.gofundme.com
+full:static.goaffpro.com
 full:static.gigabyte.com
 full:cdn.ghostery.com
 full:cdn.getkoala.com
@@ -2314,7 +2329,14 @@ full:assets-app.circleci.com
 full:app.chatwoot.com
 chasecdn.com
 full:js.chargify.com
+full:img-new.cgtrader.com
+full:assets.cgtrader.com
+full:media.cgtrader.com
 cdnfonts.com
+full:cdn-stamplib.casetify.com
+full:cdn-image02.casetify.com
+full:cdn-image01.casetify.com
+full:cdn.casetify.com
 cartocdn.com
 full:reviews-badge.capterra.com
 full:assets.capterra.com
@@ -2393,6 +2415,7 @@ xcdnpro.com
 wpmucdn.com
 full:static.community.workday.com
 full:static.workday.com
+full:static-documents.wizards.com
 full:time.windows.com
 uploads-ssl.webflow.com
 full:screenshots.webflow.com
@@ -2722,9 +2745,12 @@ full:media.beehiiv.com
 bdzybf7.com
 full:assets.basehub.com
 full:hiveplayer-static.bamgrid.com
+full:static-images.aptoide.com
 full:cdn-mobile.aptoide.com
 full:ws2-cache.aptoide.com
+full:cdn-en.aptoide.com
 full:cdn6.aptoide.com
+full:cdn.aptoide.com
 full:images.en.aptoide.com
 full:img.apponic.com
 full:cdn.apponic.com
@@ -2802,8 +2828,7 @@ full:cdn2.ttloli.com
 full:cdn.ttloli.com
 full:cdn.tracxn.com
 tpucdn.com
-full:static.toiimg.com
-full:assets.toiimg.com
+toiimg.com
 tmsimg.com
 tkcdns.com
 tiqcdn.com
@@ -3071,6 +3096,7 @@ full:static.zuora.com
 full:barracuda-assets.zoovu.com
 full:barracuda-cdn.zoovu.com
 full:hello.zonos.com
+full:assets.zephr.com
 ytimg.com
 ypcdn.com
 full:cdn-yotpo-images-production.yotpo.com
@@ -3108,7 +3134,9 @@ twimg.com
 full:media1.tenor.com
 full:media.tenor.com
 full:c.tadst.com
+tacdn.com
 t8cdn.com
+full:cdn.super.com
 full:assets.stash.com
 full:cdn.stash.com
 srcdn.com
@@ -3366,6 +3394,7 @@ ax1x.com
 full:img.atom.com
 full:g-static.ap4r.com
 a1tb.com
+full:content.9gtb.com
 full:bundle.9gtb.com
 full:accounts-cdn.9gag.com
 full:bundle.5gtb.com
@@ -3868,6 +3897,7 @@ bigcontent.io
 wixstudio.io
 full:cdn.transcend.io
 full:static.tokenview.io
+full:storage.synctrack.io
 full:cdn.simplesat.io
 full:assets.keysquare.io
 full:media.hachyderm.io
@@ -3899,6 +3929,7 @@ full:icon.icepanel.io
 full:cdn.hackaday.io
 ipfs.filebase.io
 ipfs.denarius.io
+full:assets.customer.io
 rum.cronitor.io
 cloudimg.io
 full:static.assetlab.io
