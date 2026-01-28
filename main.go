@@ -17,7 +17,7 @@ import (
 
 var (
 	dataPath    = flag.String("datapath", "./data", "Path to your custom 'data' directory")
-	outputName  = flag.String("outputname", "geosite.dat", "Name of the generated dat file")
+	outputName  = flag.String("outputname", "dlc.dat", "Name of the generated dat file")
 	outputDir   = flag.String("outputdir", "./", "Directory to place all generated files")
 	exportLists = flag.String("exportlists", "", "Lists to be flattened and exported in plaintext format, separated by ',' comma")
 )
@@ -171,7 +171,6 @@ func validateDomainChars(domain string) bool {
 	for i := range domain {
 		c := domain[i]
 		if (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.' || c == '-' || c == '_' {
-			//放宽域名中的下划线限制
 			continue
 		}
 		return false

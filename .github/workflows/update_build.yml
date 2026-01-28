@@ -127,22 +127,35 @@ jobs:
           cd code || exit 1
           go run ./ --outputdir=../ --exportlists=category-ads-all,tld-cn,cn,tld-\!cn,geolocation-\!cn,apple,icloud
           go run ./cmd/datdump/main.go --inputdata=../dlc.dat --outputdir=../ --exportlists=_all_
-          cd ../ && rm -rf code
+          # cd ../ && rm -rf code
+        
+          # 兼容目的，复制一份 geosite.dat
+          cd ..
+          cp dlc.dat geosite.dat
+          rm -rf code
 
-      - name: Generate geosite.dat sha256 hash
+      - name: Generate dlc.dat sha256 hash
         run: |
           sha256sum dlc.dat > dlc.dat.sha256sum
           sha256sum dlc.dat_plain.yml > dlc.dat_plain.yml.sha256sum
 
-      - name: Generate Zip
-        run: |
-          zip -9 geosite.dat.zip geosite.dat
-          sha256sum geosite.dat.zip > geosite.dat.zip.sha256sum
+          # geosite.dat 的哈希
+          sha256sum geosite.dat > geosite.dat.sha256sum
+
+      # 没必要
+      # - name: Generate Zip
+      #   run: |
+          # zip -9 dlc.dat.zip dlc.dat
+          # sha256sum dlc.dat.zip > dlc.dat.zip.sha256sum
+
+
+          # zip -9 geosite.dat.zip geosite.dat
+          # sha256sum geosite.dat.zip > geosite.dat.zip.sha256sum
 
       - name: Generate XZ
         run: |
-          xz -z -9 -k geosite.dat
-          sha256sum geosite.dat.xz > geosite.dat.xz.sha256sum
+          xz -z -9 -k dlc.dat
+          sha256sum dlc.dat.xz > dlc.dat.xz.sha256sum
 
       - name: Git push assets to "release" branch
         run: |
@@ -150,7 +163,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b release
-          git add *.txt *.sha256sum geosite.dat geosite.dat.zip geosite.dat.xz
+          # git add *.txt *.sha256sum dlc.dat dlc.dat.zip dlc.dat.xz
+          git add *.txt *.sha256sum geosite.dat dlc.dat dlc.dat.xz dlc.dat_plain.yml
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f -u origin release
