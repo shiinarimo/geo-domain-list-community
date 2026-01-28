@@ -102,10 +102,9 @@ jobs:
           git push origin master
 
   build:
-    name: Build geosite.dat
+    name: Build
     runs-on: ubuntu-latest
-    needs: update_rules
-    if: ${{ always() }}
+
     steps:
       - name: Checkout codebase
         uses: actions/checkout@v6
@@ -123,16 +122,18 @@ jobs:
           echo "RELEASE_NAME=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
         shell: bash
-        
-      - name: Build geosite.dat file
+
+      - name: Build dlc.dat and plain lists
         run: |
           cd code || exit 1
           go run ./ --outputdir=../ --exportlists=category-ads-all,tld-cn,cn,tld-\!cn,geolocation-\!cn,apple,icloud
+          go run ./cmd/datdump/main.go --inputdata=../dlc.dat --outputdir=../ --exportlists=_all_
           cd ../ && rm -rf code
 
       - name: Generate geosite.dat sha256 hash
         run: |
-          sha256sum geosite.dat > geosite.dat.sha256sum
+          sha256sum dlc.dat > dlc.dat.sha256sum
+          sha256sum dlc.dat_plain.yml > dlc.dat_plain.yml.sha256sum
 
       - name: Generate Zip
         run: |
@@ -157,6 +158,7 @@ jobs:
 
       - name: Release and upload assets
         run: |
-          gh release create ${{ env.TAG_NAME }} --generate-notes --latest --title ${{ env.RELEASE_NAME }} ./geosite.dat ./geosite.dat.*
+          gh release create ${{ env.TAG_NAME }} --generate-notes --latest --title ${{ env.RELEASE_NAME }} ./dlc.dat ./dlc.dat.* ./dlc.dat_plain.yml ./dlc.dat_plain.yml.*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
