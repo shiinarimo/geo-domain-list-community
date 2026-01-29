@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-01-28T08:24:13.081Z
-# Size: 4263
+# Last Updated: 2026-01-29T13:28:36.778Z
+# Size: 4268
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -710,6 +710,7 @@ myanalytics.cdn.office.net
 full:res-geo.cdn.office.net
 public.cdn.office.net
 full:shell.cdn.office.net
+full:res-3.cdn.office.net
 mxmcdn.net
 full:az700632.vo.msecnd.net
 full:alcdn.msauth.net
@@ -868,6 +869,7 @@ full:biomejs.dev
 angular.dev
 vercel.dev
 full:stats.setapp.macpaw.dev
+full:lucide.dev
 full:assets.github.dev
 full:fiddle.fastly.dev
 full:plugins.dprint.dev
@@ -2023,6 +2025,7 @@ full:badge.buildkite.com
 full:media.breitbart.com
 full:static.bravoporn.com
 bnbstatic.com
+full:sourcepointcmp.bloomberg.com
 full:cdn.blogarama.com
 full:images.blockscan.com
 full:assets.bitwarden.com
@@ -3871,6 +3874,7 @@ full:badges.greenkeeper.io
 full:cdn.document360.io
 full:prod-packager-packages.codesandbox.io
 full:sandpack-cdn-v2.codesandbox.io
+full:nodebox-runtime.codesandbox.io
 full:screenshots.codesandbox.io
 full:uploads.codesandbox.io
 full:stats.codesandbox.io
@@ -3907,6 +3911,7 @@ corsproxy.io
 full:static.corespeed.io
 full:r2cdn.corespeed.io
 full:assets.mcp.corespeed.io
+full:fast.chameleon.io
 full:sandpack-cdn-staging.blazingly.io
 bitbucket.io
 full:img.badgesize.io
