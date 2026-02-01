@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-01-29T13:28:36.778Z
-# Size: 4268
+# Last Updated: 2026-01-30T20:44:46.186Z
+# Size: 4281
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -351,6 +351,7 @@ full:static.aizanmei.org
 ziglang.org
 full:tools-static.wmflabs.org
 proxy.ustclug.org
+full:cdn.userway.org
 typedoc.org
 full:s.slideme.org
 reactjs.org
@@ -386,7 +387,7 @@ full:vuejs.org
 full:gdb.rferl.org
 full:cdn.pagic.org
 lencr.org
-jotai.org
+full:jotai.org
 cdn.icann.org
 full:godoc.org
 full:static.gnome.org
@@ -802,6 +803,8 @@ loli.net
 full:texture.laby.net
 full:static1.e621.net
 c-dn.net
+full:static.blip.net
+full:logs.blip.net
 mm.bing.net
 mapi.4kvm.net
 2mdn.net
@@ -976,6 +979,7 @@ full:css.blackmagicdesign.com
 full:dd.blackhawknetwork.com
 full:imgs02.aventertainments.com
 full:js.assemblyexchange.com
+full:cdn.animenewsnetwork.com
 full:cdn.worldvectorlogo.com
 full:cms.worldpokerdeals.com
 full:analytics.welcomesoftware.com
@@ -1012,6 +1016,7 @@ full:images.financemagnates.com
 full:ui-cdn.digitalocean-ui.com
 customerioforms.com
 full:imgssl.constantcontact.com
+full:conf.config-security.com
 cloudflare-ipfs.com
 full:shopify.cleverecommerce.com
 full:thumbnails.applegamingwiki.com
@@ -1368,6 +1373,7 @@ full:c.s-microsoft.com
 dataplane.rudderstack.com
 redditmedia.com
 full:assets.redbullshop.com
+rechargecdn.com
 full:cached.rebuyengine.com
 full:cdn.rebuyengine.com
 full:assets-www.readspeaker.com
@@ -1516,6 +1522,7 @@ full:f001.backblazeb2.com
 full:f000.backblazeb2.com
 full:img.applealmond.com
 ancestrycdn.com
+full:cdn.amgreatness.com
 full:showcase.abovemarket.com
 full:assets.aboutamazon.com
 full:cdn2.abiresearch.com
@@ -1898,7 +1905,9 @@ full:cdn.nodeimage.com
 full:cms-assets.nodecraft.com
 nhentaimg.com
 full:media.newyorker.com
+full:static.newsbreak.com
 full:files.namecheap.com
+full:jssdkcdns.mparticle.com
 full:images.moovitapp.com
 full:static.mocortech.com
 full:public.mocortech.com
@@ -2133,6 +2142,7 @@ full:embed.savvycal.com
 full:public.saasexch.com
 rrcdnbf3.com
 full:apps-static.route4me.com
+full:cdn.roseperl.com
 roseimgs.com
 full:media-cdn.rollcall.com
 full:cdnassets.roboflow.com
@@ -2875,6 +2885,7 @@ scene7.com
 sc-cdn.com
 sascdn.com
 full:embed.runkit.com
+full:static.rumble.com
 full:i.rtings.com
 cms.replit.com
 cdn.replit.com
@@ -4040,6 +4051,7 @@ full:cdn.filen.io
 ipfs.decoo.io
 full:assets2.canny.io
 full:assets.canny.io
+full:cdn.bogos.io
 full:code.benco.io
 full:polyfill.bbhub.io
 full:assets.bbhub.io
@@ -4137,6 +4149,7 @@ cdn-lfs-us-1.huggingface.co
 cdn-uploads.huggingface.co
 full:cdn-avatars.huggingface.co
 cdn-lfs.huggingface.co
+full:js.convertflow.co
 full:waitlisted.co
 full:widgets.listenlive.co
 full:sdk.listenlive.co
