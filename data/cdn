@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-02-17T15:13:23.438Z
-# Size: 4351
+# Last Updated: 2026-02-25T07:43:47.516Z
+# Size: 4362
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -620,6 +620,7 @@ full:img.javstore.net
 hsstatic.net
 full:img.highporn.net
 full:cdn.highporn.net
+full:files.gempages.net
 forgecdn.net
 full:connect.facebook.net
 full:static.esimplus.net
@@ -770,6 +771,7 @@ pixfs.net
 full:img.pawoo.net
 nsimg.net
 full:static.monei.net
+full:assets.maxon.net
 full:static-cdn.jtvnw.net
 full:jsdelivr.ioiox.net
 full:static-act.imoim.net
@@ -1386,6 +1388,7 @@ full:s3media.squarespace.com
 full:assets.squarespace.com
 splunkcloud.com
 full:assets.speedvitals.com
+full:images.socialblade.com
 full:cdn.activity.smart-bdash.com
 skypeassets.com
 shoplineimg.com
@@ -1480,6 +1483,7 @@ full:media.graphassets.com
 full:static.gettyimages.com
 full:media.gettyimages.com
 cdn.getfeedback.com
+full:assets.gemcommerce.com
 gauthstatic.com
 full:stories.freepiklabs.com
 full:static.foxbusiness.com
@@ -1764,6 +1768,7 @@ full:cdn.conveythis.com
 full:assets.convertkit.com
 full:media.convertkit.com
 full:f.convertkit.com
+full:cdn.convertbox.com
 full:images.contentful.com
 full:cdn.contentful.com
 full:cdn.eu.contentful.com
@@ -1972,6 +1977,7 @@ lowendbox.com
 full:cdn.lineicons.com
 full:scdn.line-apps.com
 full:cdn.lgrckt-in.com
+full:images.klipfolio.com
 kinja-img.com
 full:images.justwatch.com
 full:cdn.joypixels.com
@@ -2267,6 +2273,7 @@ full:imag.malavida.com
 full:img-api.mac4ever.com
 lowescdn.com
 full:media.loom-app.com
+full:resource.logitech.com
 full:linkstorage.linkfire.com
 full:services.linkfire.com
 full:media.letsdeel.com
@@ -3580,6 +3587,7 @@ full:weather.istatmenus.app
 full:cdn.accessibly.app
 on-fleek.app
 full:cdn.langshop.app
+full:widgets.goaffpro.app
 full:assets.airbuddy.app
 netlify.app
 full:videos.elephas.app
@@ -3919,6 +3927,8 @@ full:images.microcms-assets.io
 full:assets-next.mattersprotocol.io
 full:cdn.simplelocalize.io
 combinatronics.io
+full:imgs.socialinsider.io
+full:cms.socialinsider.io
 full:edge.sitecorecloud.io
 opentelemetry.io
 full:static.ipgeolocation.io
@@ -4102,6 +4112,7 @@ full:data.pendo.io
 full:cdn.pendo.io
 nxcli.io
 full:media.mstdn.io
+full:purehalo.logto.io
 strapi.logto.io
 full:cdn-blocks.karte.io
 full:cdn-edge.karte.io
