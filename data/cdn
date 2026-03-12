@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-03-08T18:33:58.644Z
-# Size: 4397
+# Last Updated: 2026-03-12T10:19:08.122Z
+# Size: 4402
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -769,6 +769,7 @@ cdn.cwinfo.net
 cdnppb.net
 boxcdn.net
 badgen.net
+zkcdn.net
 full:assets.video.yahoo.net
 full:assets.xmind.net
 widen.net
@@ -2121,6 +2122,7 @@ assettype.com
 aspnetcdn.com
 appmifile.com
 anyhentai.com
+full:assets-proxy.anthropic.com
 full:www-cdn.anthropic.com
 full:s-cdn.anthropic.com
 full:a-cdn.anthropic.com
@@ -3476,6 +3478,9 @@ full:assets.kagi.com
 full:social-reaction-api.hk01.com
 full:cdn.hk01.com
 full:assets.habr.com
+full:event-assets.gsma.com
+fonts.gsma.com
+full:fa.gsma.com
 full:cms-cdn.goat.com
 full:assets.goat.com
 full:image.goat.com
