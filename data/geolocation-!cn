@@ -45,6 +45,8 @@ include:paypal
 include:softbank
 include:stripe
 include:visa
+## アプリペイ
+app-pay.jp
 
 # CDN companies & Services
 include:category-cdn-!cn
@@ -83,7 +85,6 @@ include:embl
 include:freecodecamp
 include:kaggle
 include:khanacademy
-include:knovel
 include:laracasts
 include:libgen
 include:lifewire
@@ -156,6 +157,7 @@ include:category-enhance-gaming
 include:category-mobile-repair
 include:category-ntp
 include:category-password-management
+include:category-urlshortner
 include:category-web-archive
 include:decryptipastore # iOS
 
@@ -170,7 +172,6 @@ include:addtoany
 include:adguard
 include:aptoide
 include:arphic
-include:bitly
 include:blender
 include:brightcove
 include:buymeacoffee
@@ -224,7 +225,6 @@ include:sb
 include:setapp
 include:sharethis
 include:shopify
-include:shorturl
 include:slideshare
 include:sourceforge
 include:squareup
@@ -234,7 +234,6 @@ include:svp
 include:test-ipv6
 include:tex
 include:tidelift
-include:tinyurl
 include:trello
 include:tumblr
 include:tutanota
@@ -259,6 +258,10 @@ cookielaw.org
 onetrust.com
 osano.com
 usercentrics.eu
+## Dynatrace
+dynatrace.com
+## FamilySearch
+familysearch.org
 ## Greasy Fork
 greasyfork.org
 ## Online LaTeX Editor
@@ -308,7 +311,6 @@ wiki.gg
 
 # Others
 include:avaxhome
-include:dlsite
 include:espressif
 include:familymart
 include:fzdm
