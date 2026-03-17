@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-03-15T08:13:51.759Z
-# Size: 4406
+# Last Updated: 2026-03-17T08:54:48.089Z
+# Size: 4408
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -78,6 +78,7 @@ full:jssdk.opin.media
 icon.horse
 full:global-assets.fitch.group
 full:node.green
+full:tomshardware-data.community.forum
 full:assets.buttondown.email
 ipfs-gateway.cloud
 dreamscape.cloud
@@ -2593,6 +2594,7 @@ pxlecdn.com
 full:image.prntscr.com
 full:st.prntscr.com
 full:cdn.privacy.com
+full:app-static-prod.posthog.com
 full:app-static.eu.posthog.com
 full:us-assets.i.posthog.com
 full:eu-assets.i.posthog.com
