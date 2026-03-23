@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-03-17T08:54:48.089Z
-# Size: 4408
+# Last Updated: 2026-03-23T06:09:06.844Z
+# Size: 4411
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -947,6 +947,7 @@ w-credentialless-staticblitz.com
 full:cdn-a.sonyentertainmentnetwork.com
 agechecker-northern-apps.com
 full:useruploads.visualwebsiteoptimizer.com
+full:dev.visualwebsiteoptimizer.com
 full:runkit-packages-static.com
 full:cdn.quickemailverification.com
 hackerone-user-content.com
@@ -2278,7 +2279,9 @@ msftncsi.com
 full:cdnl.moviefap.com
 full:img.moviefap.com
 full:cdn-public-apis.moonlock.com
+full:antiqua-ux-cdn.monotype.com
 full:pp-static.monotype.com
+full:static.monotype.com
 sny.monosnap.com
 full:momentjs.com
 full:play.modujx11.com
@@ -2449,7 +2452,6 @@ full:static-2.bitchute.com
 full:static-1.bitchute.com
 full:bcmedia.bitchute.com
 bgstatic.com
-full:cdn1.bambulab.com
 badoocdn.com
 full:assets.awwwards.com
 full:cdn.accounts.autodesk.com
@@ -4099,6 +4101,7 @@ full:app-api.vidjet.io
 full:assets.upload.io
 full:js.upload.io
 full:tiles.terria.io
+full:scripts.tabler.io
 full:static.status.io
 full:image.status.io
 full:media.smooch.io
