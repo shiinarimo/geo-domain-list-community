@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-03-23T06:09:06.844Z
-# Size: 4411
+# Last Updated: 2026-03-31T15:36:18.442Z
+# Size: 4429
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -829,6 +829,7 @@ full:s3.arkjp.net
 img3.acsta.net
 img2.acsta.net
 img1.acsta.net
+zobj.net
 full:cdn.ywxi.net
 full:static.wwto.net
 full:fonts.sony.net
@@ -898,6 +899,7 @@ usercontent.dev
 full:tuf-repo-cdn.sigstore.dev
 full:pkg-size.dev
 full:cdn-web.orbstack.dev
+full:www.fumadocs.dev
 full:storybooks.fluentui.dev
 full:logos.composio.dev
 workers.dev
@@ -1730,6 +1732,7 @@ full:assets.hearstapps.com
 full:hips.hearstapps.com
 hanime-cdn.com
 full:cdn.hackernoon.com
+grouponcdn.com
 full:assets.grooveapps.com
 content-storage-upload.googleapis.com
 full:firebaseinstallations.googleapis.com
@@ -2050,6 +2053,7 @@ full:media.glassdoor.com
 gitmirror.com
 assets.getpocket.com
 full:i.geekflare.com
+garmincdn.com
 full:mosaic-blender.fxtwitter.com
 full:mosaic.fxtwitter.com
 full:webp.frostming.com
@@ -2075,10 +2079,12 @@ full:epic-social-social-modules-prod.ol.epicgames.com
 ensighten.com
 full:assets.endorsely.com
 embedgram.com
+full:static.assets-stash.eet-china.com
 design-system.economist.com
 full:marber-cdn.economist.com
 full:cmp-cdn.p.aws.economist.com
 dummyjson.com
+dubassets.com
 doppiocdn.com
 full:cdn.doofinder.com
 full:assets.dnsfilter.com
@@ -2490,12 +2496,14 @@ full:static.afterpay.com
 full:assets.adobedtm.com
 full:static.addtoany.com
 full:image.p-c2-x.abema-tv.com
+full:cdn.zolplay.com
 zohocdn.com
 full:cdn.zigpoll.com
 media.zestyio.com
 full:web-assets.zendesk.com
 full:assets.zendesk.com
 full:img.youtube.com
+full:abre-videos.youjizz.com
 full:cdne-pics.youjizz.com
 yelpcdn.com
 full:cdn.yamibuy.com
@@ -2831,6 +2839,7 @@ sessions.bugsnag.com
 notify.bugsnag.com
 bstatic.com
 botsrv2.com
+full:assets2.blubrry.com
 blobcdn.com
 full:cms.blavity.com
 full:organizer.bizzabo.com
@@ -3134,6 +3143,10 @@ full:tuf-repo.github.com
 full:raw.github.com
 pkg.github.com
 full:assets.genius.com
+full:static.garmin.com
+full:fonts.garmin.com
+full:res.garmin.com
+full:share-assets.fe.garmin.com
 fw-cdn.com
 fsvod1.com
 full:assets.foxdcg.com
@@ -3587,6 +3600,7 @@ full:cdn.ecomm.ui.com
 full:net-fe-static-assets.network-controller.svc.ui.com
 full:uos-support-files.svc.ui.com
 full:content-cdn.svc.ui.com
+full:cdn.casestudies.svc.ui.com
 full:account-cdn.svc.ui.com
 full:cdn.academy.svc.ui.com
 full:images.svc.ui.com
@@ -3656,6 +3670,7 @@ full:web-cdn.bsky.app
 full:video.bsky.app
 cdn.bsky.app
 web.app
+full:images.rss.app
 csb.app
 full:cdn.7tv.app
 full:cdn.24.co.za
@@ -3725,6 +3740,8 @@ full:clips-media-assets2.twitch.tv
 full:assets.twitch.tv
 full:embed.twitch.tv
 storry.tv
+full:starlight.nebula.tv
+full:images.nebula.tv
 full:static.tella.tv
 full:static-homepage-en.pluto.tv
 full:images.pluto.tv
@@ -4189,6 +4206,7 @@ full:fonts.loox.io
 logz.io
 jspm.io
 full:static.itch.io
+full:ipxy.io
 ipfs.io
 iili.io
 full:libraries.hund.io
@@ -4420,4 +4438,3 @@ cdn.s7s.ai
 full:bot.ivy.ai
 full:rules.ac
 ################## EOF ##################
-
