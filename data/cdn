@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-03-31T15:36:18.442Z
-# Size: 4429
+# Last Updated: 2026-04-06T13:21:04.772Z
+# Size: 4437
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -19,6 +19,7 @@ full:images.web3.storage
 full:api.web3.storage
 cdn.neustar
 mangadex.network
+full:assets.tangled.network
 ipfs.eth.aragon.network
 gateway.serph.network
 cdnjs.network
@@ -781,6 +782,7 @@ full:img.reimu.net
 full:cdn.reimu.net
 pximg.net
 pixfs.net
+full:origin.picgo.net
 full:img.pawoo.net
 nsimg.net
 full:static.monei.net
@@ -1266,6 +1268,7 @@ redditstatic.com
 full:cdn.privacy-mgmt.com
 pressablecdn.com
 full:ui.powerreviews.com
+full:cdna.pcpartpicker.com
 full:js.partnerstack.com
 full:sbl.onfastspring.com
 full:cdn.onfastspring.com
@@ -1899,6 +1902,7 @@ tokyvideo.com
 tnastatic.com
 tinifycdn.com
 tiktokcdn.com
+full:assets.tigerdata.com
 full:thumbsnap.com
 thisiscdn.com
 full:static.test-beta.com
@@ -2411,6 +2415,7 @@ dditsadn.com
 full:cdn.datacamp.com
 full:script.custobar.com
 full:cdn.credible.com
+full:cdn.cr-proxy.com
 full:assets.controld.com
 full:img.connatix.com
 full:cds.connatix.com
@@ -2958,6 +2963,7 @@ full:js.stripe.com
 full:heatmap-external-a.strava.com
 full:web-assets.strava.com
 full:content-a.strava.com
+full:wre-assets.prod.mapping.strava.com
 full:cdn-1.strava.com
 full:cdn.stonly.com
 tile.stamen.com
@@ -3015,6 +3021,7 @@ full:tiles0.planet.com
 full:tiles.planet.com
 full:assets.pixlee.com
 pinimg.com
+full:assets.pingie.com
 phncdn.com
 full:images.pexels.com
 full:static.peatio.com
@@ -3283,9 +3290,7 @@ full:cdn.plaid.com
 full:i.pcmag.com
 full:apps.paidy.com
 full:cdn.paidy.com
-full:package-assets.oomol.com
 full:registry.oomol.com
-full:static.oomol.com
 full:static-production.npmjs.com
 full:static.npmjs.com
 npmfs.com
@@ -3369,6 +3374,7 @@ full:s3-alpha-sig.figma.com
 full:marketing.figma.com
 full:s3-alpha.figma.com
 full:static.figma.com
+full:errors.figma.com
 full:sprig.figma.com
 full:static.fc2id.com
 full:static.fc2cn.com
@@ -3809,12 +3815,14 @@ gitpage.si
 gitapp.si
 gcr.si
 full:assets.vantage.sh
+full:avatar.tangled.sh
 full:cdn.cracked.sh
 full:api-frameworks.vercel.sh
 full:gitpkg-fork.vercel.sh
 full:openapi.vercel.sh
 full:s3.doujin.sh
 surge.sh
+gateway.scarf.sh
 full:static.scarf.sh
 full:proxy.cors.sh
 full:brew.sh
