@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-04-06T13:21:04.772Z
-# Size: 4437
+# Last Updated: 2026-04-14T12:21:08.391Z
+# Size: 4451
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -632,6 +632,7 @@ full:img.javstore.net
 hsstatic.net
 full:img.highporn.net
 full:cdn.highporn.net
+full:embed.getwally.net
 full:files.gempages.net
 forgecdn.net
 full:connect.facebook.net
@@ -1110,6 +1111,7 @@ full:media.nbcconnecticut.com
 full:image.email.microsoftemail.com
 mediadecathlon.com
 full:assets.media-platform.com
+full:media.marshmallow-qa.com
 full:na-library.klarnaservices.com
 full:static.killedbygoogle.com
 kc-usercontent.com
@@ -1387,6 +1389,8 @@ uber-assets.com
 full:fastly-cloud.typenetwork.com
 full:cloud.typenetwork.com
 full:cms.typenetwork.com
+full:static.tryprofound.com
+full:ph.tryprofound.com
 full:static-assets-1.truthsocial.com
 full:cdn.trustedsite.com
 full:widgets.tree-nation.com
@@ -1901,6 +1905,7 @@ full:hawk.tomsguide.com
 tokyvideo.com
 tnastatic.com
 tinifycdn.com
+full:telemetry.timescale.com
 tiktokcdn.com
 full:assets.tigerdata.com
 full:thumbsnap.com
@@ -2582,6 +2587,7 @@ full:cdn.sheetjs.com
 full:i.servimg.com
 full:videos2-h.sendvid.com
 full:thumbs2.sendvid.com
+full:static.semrush.com
 full:cdn.segment.com
 full:ocsp.sectigo.com
 full:crt.sectigo.com
@@ -2707,6 +2713,7 @@ full:img3.javmost.com
 full:img2.javmost.com
 full:cdn.javmiku.com
 full:img2.javdove.com
+full:static.isitetv.com
 full:assets.ipstack.com
 full:i.insider.com
 full:static.iris.informa.com
@@ -2818,6 +2825,7 @@ full:cdn.devdojo.com
 denopkg.com
 dellcdn.com
 full:import-cdn.default.com
+full:pixel-cdn.default.com
 full:cdn.datdota.com
 full:proxy.csidetm.com
 full:static.comicbz.com
@@ -3216,6 +3224,7 @@ full:i.anysex.com
 full:code.buywithprime.amazon.com
 full:d2c.aws.amazon.com
 full:time.akamai.com
+full:static-app.ahrefs.com
 full:static.ahrefs.com
 full:cdn1.affirm.com
 assets.adidas.com
@@ -3311,6 +3320,7 @@ full:static-exp2.licdn.com
 full:static-exp1.licdn.com
 full:static.licdn.com
 full:media.licdn.com
+full:ahrefscomscreenshot-3b70.kxcdn.com
 full:wikiwandv2-19431.kxcdn.com
 full:searchanise-ef84.kxcdn.com
 full:wandi-6402.kxcdn.com
@@ -3635,6 +3645,7 @@ full:tilemaps.icgc.cat
 full:oss.moe.cat
 tile.openstreetmap.bzh
 full:ns-cdn.neustar.biz
+full:media.currys.biz
 full:pics.mf8.biz
 full:static.sdkassets.chime.aws
 ipfs.kaleido.art
@@ -3719,6 +3730,7 @@ full:cf.shopee.tw
 full:socialpic.video.friday.tw
 full:vbmspic.video.friday.tw
 full:megapx-assets.dcard.tw
+full:assets.clibo.tw
 pimg.tw
 full:news-data.pts.org.tw
 full:img-fnc.ebc.net.tw
@@ -4129,6 +4141,7 @@ full:tiles.terria.io
 full:scripts.tabler.io
 full:static.status.io
 full:image.status.io
+full:cdn.socket.io
 full:media.smooch.io
 full:cdn.smooch.io
 webfe.shopee.io
@@ -4432,6 +4445,7 @@ full:s3.masto.ai
 full:participants.evolv.ai
 full:media.evolv.ai
 full:cdn.candy.ai
+full:cdn.candu.ai
 telemetry.services.yofi.ai
 full:cdn2.suno.ai
 full:cdn1.suno.ai
