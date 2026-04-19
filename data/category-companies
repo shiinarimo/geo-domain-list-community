@@ -13,10 +13,12 @@ include:atlassian
 include:att
 include:autodesk
 include:bandwagonhost
+include:beget
 include:blurams
 include:broadcom
 include:canon
 include:canva
+include:carrotquest
 include:chegg
 include:cisco
 include:cloudcone
@@ -34,6 +36,7 @@ include:gigabyte
 include:gmo-internet
 include:godaddy
 include:google
+include:headhunter
 include:hetzner
 include:hinet
 include:hkbn
@@ -55,6 +58,7 @@ include:mailru-group
 include:meta
 include:microsoft
 include:mikrotik
+include:mindbox
 include:mindgeek
 include:mozilla
 include:msi
@@ -68,12 +72,14 @@ include:oracle
 include:panasonic
 include:pccw
 include:plex
+include:progress
 include:qnap
 include:qualcomm
 include:qwant
 include:razer
 include:salesforce
 include:samsung
+include:selectel
 include:skyperfect
 include:smartone
 include:snap
@@ -84,9 +90,11 @@ include:st
 include:synology
 include:symantec
 include:theboringcompany
+include:timeweb
 include:tonec
 include:uber
 include:ubiquiti
+include:ucoz
 include:verisign
 include:verizon
 include:vultr
