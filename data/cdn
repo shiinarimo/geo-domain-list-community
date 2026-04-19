@@ -1,6 +1,6 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-04-14T12:21:08.391Z
+# Last Updated: 2026-04-19T12:42:31.857Z
 # Size: 4451
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -106,9 +106,9 @@ ipfs.litnet.work
 full:static.frame.work
 full:tn.txxx.tube
 full:js.txxx.tube
-full:media.d.tube
+full:play.d.tube
+full:nas2.d.tube
 full:docs.mrchromebox.tech
-full:media.remax-prod.eng.remax.tech
 full:static.pepy.tech
 full:packages.jetbrains.team
 full:pkg-cdn.jetbrains.team
@@ -123,6 +123,7 @@ full:placeholder.pics
 am-cdn.pics
 codeberg.page
 instant.page
+full:images.status.page
 kinsta.page
 full:statics-prod.mirrordaily.news
 full:assets-next.matters.news
@@ -217,7 +218,6 @@ cdndoe.xyz
 picjs.xyz
 chcdn.xyz
 full:cdn-longterm.mee6.xyz
-full:vod.jfly.xyz
 full:sdk-cdn.fun.xyz
 full:img.hentaihaven.xxx
 imhentai.xxx
@@ -374,7 +374,6 @@ full:fonts.codeberg.org
 full:static.aizanmei.org
 ziglang.org
 full:tools-static.wmflabs.org
-full:tiles.wmflabs.org
 proxy.ustclug.org
 full:cdn.userway.org
 typedoc.org
@@ -414,6 +413,7 @@ full:gdb.rferl.org
 full:cdn.pagic.org
 lencr.org
 full:jotai.org
+full:file.izanm.org
 cdn.icann.org
 full:godoc.org
 full:tileserver.gnome.org
@@ -520,6 +520,7 @@ full:telemetry2.devolutions.net
 full:cdnfonts.devolutions.net
 full:cdnweb.devolutions.net
 full:cdn.devolutions.net
+full:static.contentpass.net
 full:cdn.arstechnica.net
 vscode-cdn.net
 ungrounded.net
@@ -599,7 +600,6 @@ full:pic-bstarstatic.akamaized.net
 full:img-s-msn-com.akamaized.net
 full:mwf-service.akamaized.net
 full:viu-static.akamaized.net
-full:mycommerce.akamaized.net
 full:melonbooks.akamaized.net
 full:amp.akamaized.net
 full:mixin-images.zeromesh.net
@@ -687,7 +687,6 @@ cdn.mozilla.net
 minotar.net
 jscloud.net
 full:pg2dhpc3p5ec22g3.jkforum.net
-full:file.izanmei.net
 full:cdn-img3.iporntv.net
 full:cdn-img2.iporntv.net
 full:cdn.iporntv.net
@@ -701,7 +700,6 @@ full:cdn2.ettoday.net
 full:cdn1.ettoday.net
 daumcdn.net
 full:badges.crowdin.net
-full:edge1.certona.net
 full:cf-images.ap-northeast-1.prod.boltdns.net
 full:cf-images.us-east-1.prod.boltdns.net
 full:mir-s3-cdn-cf.behance.net
@@ -738,7 +736,6 @@ full:data.osmand.net
 full:attachments.office.net
 nel.measure.office.net
 full:support.content.office.net
-full:cdn.graph.office.net
 full:cdn.forms.office.net
 full:cdn.designerapp.osi.office.net
 myanalytics.cdn.office.net
@@ -757,8 +754,6 @@ tiles-api.maps.komoot.net
 full:fiddle.jshell.net
 full:ik.imgkit.net
 imgair.net
-full:images.idgesg.net
-full:alt.idgesg.net
 hbfile.net
 full:practicaldev-herokuapp-com.freetls.fastly.net
 full:lastfm.freetls.fastly.net
@@ -878,11 +873,11 @@ full:latency-test.lab.skk.moe
 full:img.skk.moe
 cdn.skk.moe
 full:objects.hit.moe
-full:assets-cdn.anh.moe
 full:static.ahu.moe
 full:file.ahu.moe
 cloudflare.ltd
 full:static.coinall.ltd
+zpicdn.lol
 full:image.acg.lol
 full:cdn.cbd.int
 full:tile2.intervals.icu
@@ -1045,7 +1040,7 @@ project1content.com
 full:static.planetminecraft.com
 pipedriveassets.com
 full:openseauserdata.com
-full:fs2.onlyhentaistuff.com
+full:ca2.onlyhentaistuff.com
 full:ca1.onlyhentaistuff.com
 full:cdn.northropgrumman.com
 full:irp-cdn.multiscreensite.com
@@ -1063,7 +1058,7 @@ customerioforms.com
 full:imgssl.constantcontact.com
 full:conf.config-security.com
 cloudflare-ipfs.com
-full:shopify.cleverecommerce.com
+full:detectportal.brave-http-only.com
 full:thumbnails.applegamingwiki.com
 full:images.applegamingwiki.com
 full:amazon-omni-cdn.com
@@ -1146,6 +1141,7 @@ full:assets-cdn.watchdisneyfe.com
 walmartimages.com
 full:explorer-api.walletconnect.com
 full:js.verygoodvault.com
+full:cdn.tvpagewidgets.com
 transcend-cdn.com
 full:tile.thunderforest.com
 bundle.thimatic-apps.com
@@ -1390,6 +1386,7 @@ full:fastly-cloud.typenetwork.com
 full:cloud.typenetwork.com
 full:cms.typenetwork.com
 full:static.tryprofound.com
+full:img.api.tryprofound.com
 full:ph.tryprofound.com
 full:static-assets-1.truthsocial.com
 full:cdn.trustedsite.com
@@ -1545,7 +1542,6 @@ full:firebase-settings.crashlytics.com
 settings.crashlytics.com
 e.crashlytics.com
 full:cdn.comparitech.com
-full:cloudfront.codeproject.com
 cloudatacdn.com
 cdn-website.com
 full:events.ld.catamorphic.com
@@ -1627,7 +1623,6 @@ full:ui-statics-cf.streamable.com
 full:cdn-cf-east.streamable.com
 full:statics.streamable.com
 sthlstatic.com
-full:image.stheadline.com
 full:cdn.staticswin.com
 full:tiles.stadiamaps.com
 full:s3.stackabuse.com
@@ -1855,6 +1850,7 @@ bestjavcdn.com
 full:widgets.automizely.com
 full:widget.automizely.com
 full:sdks.automizely.com
+assets-gap.com
 full:cdnb.artstation.com
 full:cdna.artstation.com
 full:cdn.artstation.com
@@ -1884,7 +1880,6 @@ full:jetpack.wordpress.com
 files.wordpress.com
 full:s0.wordpress.com
 wixstatic.com
-full:image.westinyou.com
 full:s3.eu-central-2.wasabisys.com
 s3.wasabisys.com
 full:assets.videowise.com
@@ -1962,6 +1957,7 @@ full:js.qualified.com
 full:plugins.pubtailer.com
 full:vpncdn.protonweb.com
 full:pmecdn.protonweb.com
+full:content.presspage.com
 full:content.powerapps.com
 full:cdnstatic.porno-cum.com
 full:static.polldaddy.com
@@ -2153,6 +2149,7 @@ full:pm1.aninoapps.com
 full:pa1.aninoapps.com
 full:images.anandtech.com
 full:ip-ranges.amazonaws.com
+full:sdk.amazonaws.com
 assets.as2.amazonaws.com
 abcnewsfe.com
 52netflix.com
@@ -2170,8 +2167,7 @@ xnxx-cdn.com
 full:images-eds-ssl.xboxlive.com
 full:dlassets-ssl.xboxlive.com
 full:bundler.wix-code.com
-full:assets.wikiwand.com
-full:cdn.wikiwand.com
+full:img.wikiwand.com
 full:cdn.wccftech.com
 full:apps.voxmedia.com
 vimeocdn.com
@@ -2220,6 +2216,11 @@ streamhk.com
 full:assets.stickpng.com
 stapecdn.com
 full:img.sparemin.com
+full:liveimg.sooplive.com
+full:static.sooplive.com
+full:stimg.sooplive.com
+full:res.sooplive.com
+img.sooplive.com
 full:rv-assets.softonic.com
 full:static.snapchat.com
 smushcdn.com
@@ -2284,7 +2285,6 @@ full:d.newsweek.com
 full:js.navattic.com
 full:c.navattic.com
 full:static.narrativ.com
-full:static.namebeta.com
 full:sg-thumbnail-drive.mypikpak.com
 full:res-etl-ssl.mypikpak.com
 full:static.mypikpak.com
@@ -2478,6 +2478,7 @@ full:assets.apilayer.com
 full:static.animaapp.com
 full:c.animaapp.com
 full:cdn.amcharts.com
+full:bcdn.alotporn.com
 full:oaos-resources.allstate.com
 contenthub.allstate.com
 full:resources.allstate.com
@@ -2921,6 +2922,7 @@ full:cdn.vuukle.com
 full:mcdnds.vrporn.com
 full:mcdns.vrporn.com
 full:mcdn.vrporn.com
+full:assets.vrchat.com
 full:marketplace-web-assets.vinted.com
 full:static-assets.vinted.com
 full:static.vinted.com
@@ -3087,7 +3089,6 @@ full:cdn-client.medium.com
 full:glyph.medium.com
 full:miro.medium.com
 full:twemoji.maxcdn.com
-full:tile.mapzen.com
 full:static-assets.mapbox.com
 tiles.mapbox.com
 full:test.manyse.com
@@ -3162,6 +3163,7 @@ full:static.garmin.com
 full:fonts.garmin.com
 full:res.garmin.com
 full:share-assets.fe.garmin.com
+full:content.gapinc.com
 fw-cdn.com
 fsvod1.com
 full:assets.foxdcg.com
@@ -3244,7 +3246,6 @@ full:cdn-swell-assets.yotpo.com
 full:cdn-loyalty.yotpo.com
 full:staticw2.yotpo.com
 full:img1.yeggi.com
-full:yep.video.yahoo.com
 xhcdn.com
 wsimg.com
 wixmp.com
@@ -3574,7 +3575,6 @@ full:assets.fe.itv.com
 full:sm.ign.com
 assets.ibm.com
 full:widgets.coaches.gnc.com
-full:certona.gap.com
 full:m3.gab.com
 full:static-media.fox.com
 full:contents-thumbnail2.fc2.com
@@ -3591,7 +3591,6 @@ full:cdn3.dan.com
 full:cdn2.dan.com
 full:cdn1.dan.com
 full:cdn0.dan.com
-full:static-landing.probiplacehold.cot.com
 full:lightning.cnn.com
 full:media.cnn.com
 full:cdn.cnn.com
@@ -3646,6 +3645,7 @@ full:oss.moe.cat
 tile.openstreetmap.bzh
 full:ns-cdn.neustar.biz
 full:media.currys.biz
+full:assets.zpic.biz
 full:pics.mf8.biz
 full:static.sdkassets.chime.aws
 ipfs.kaleido.art
@@ -3760,6 +3760,7 @@ full:embed.twitch.tv
 storry.tv
 full:starlight.nebula.tv
 full:images.nebula.tv
+full:f.upanh.tv
 full:static.tella.tv
 full:static-homepage-en.pluto.tv
 full:images.pluto.tv
@@ -3828,7 +3829,7 @@ gitapp.si
 gcr.si
 full:assets.vantage.sh
 full:avatar.tangled.sh
-full:cdn.cracked.sh
+full:static.cracked.sh
 full:api-frameworks.vercel.sh
 full:gitpkg-fork.vercel.sh
 full:openapi.vercel.sh
@@ -3941,6 +3942,7 @@ xascdn.li
 javcdn.li
 full:pomf2.lain.la
 ipfs.lain.la
+files.sooplive.co.kr
 full:static.pfrt.yna.co.kr
 full:img9.yna.co.kr
 full:img8.yna.co.kr
@@ -4055,8 +4057,6 @@ emotivecdn.io
 full:analytics.canarymail.io
 full:status.canarymail.io
 full:cdn.brandfetch.io
-full:loutre.blockchair.io
-full:js-cdn.blockchair.io
 bigcontent.io
 wixstudio.io
 full:cdn.transcend.io
@@ -4113,7 +4113,6 @@ full:images.prismic.io
 cdn.prismic.io
 full:cdn.pagefly.io
 pagecdn.io
-full:static.opensea.io
 full:favicons.nextdns.io
 full:cdn.logbase.io
 full:media.lantern.io
@@ -4305,6 +4304,7 @@ full:www.acgpix.de
 full:cdn.ionos.de
 full:tile.mtbmap.cz
 ipfs.slang.cx
+zpi.cx
 full:assets.openalternative.co
 full:cdn.stackoverflow.co
 cdn-lfs-us-1.huggingface.co
@@ -4412,6 +4412,7 @@ full:cdn4.focus.bg
 full:components.cyclingfactory.be
 full:images.cyclingfactory.be
 full:tile.osm.be
+full:static.cracked.ax
 abc-cdn.net.au
 full:res.abc.net.au
 full:styleguide-assets.shannons.com.au
@@ -4430,16 +4431,15 @@ full:assets.cloudpilot.ai
 full:api.instantly.ai
 full:sdk.customfit.ai
 full:static.returngo.ai
-full:file.xiaohai.ai
 full:prod-cdn.webtune.ai
 full:cms.mistral.ai
 full:widget.docsbot.ai
 full:cdn.aimerce.ai
+full:static.zanmei.ai
 full:vetted.ai
 full:static.netify.ai
 full:r2.leadsy.ai
 full:cdn.fellou.ai
-full:play.xiaoh.ai
 full:tag.tvads.ai
 full:s3.masto.ai
 full:participants.evolv.ai
