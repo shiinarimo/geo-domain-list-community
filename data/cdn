@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-04-19T12:42:31.857Z
-# Size: 4451
+# Last Updated: 2026-04-24T03:31:11.843Z
+# Size: 4453
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1143,7 +1143,7 @@ full:explorer-api.walletconnect.com
 full:js.verygoodvault.com
 full:cdn.tvpagewidgets.com
 transcend-cdn.com
-full:tile.thunderforest.com
+tile.thunderforest.com
 bundle.thimatic-apps.com
 full:cdn.thewirecutter.com
 full:files.thehackernews.com
@@ -1624,6 +1624,7 @@ full:cdn-cf-east.streamable.com
 full:statics.streamable.com
 sthlstatic.com
 full:cdn.staticswin.com
+full:tiles-eu.stadiamaps.com
 full:tiles.stadiamaps.com
 full:s3.stackabuse.com
 full:img.sparknotes.com
@@ -3052,6 +3053,7 @@ od-cdn.com
 full:assets.nypost.com
 full:pbc.nypost.com
 full:images.nvidia.com
+full:brand-assets.cne.ngc.nvidia.com
 npmcdn.com
 full:images.now-tv.com
 full:i.niupic.com
