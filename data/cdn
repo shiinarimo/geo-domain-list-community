@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-04-24T03:31:11.843Z
-# Size: 4453
+# Last Updated: 2026-04-30T02:40:41.361Z
+# Size: 4459
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -253,6 +253,7 @@ dget.top
 full:css.4jpg.top
 cktu01.sbs
 bundle.run
+full:cdn.mer.run
 esm.run
 full:content.any.run
 full:i.mij.rip
@@ -337,6 +338,7 @@ ampproject.org
 full:creativajs.altervista.org
 full:intake-logging.wikimedia.org
 full:upload.wikimedia.org
+full:maps.wikimedia.org
 full:cdn.travis-ci.org
 full:light.spicegems.org
 full:user-uploads.perchance.org
@@ -358,6 +360,9 @@ full:static.spigotmc.org
 full:proxy.spigotmc.org
 rollupjs.org
 recharts.org
+full:gis.pinkbike.org
+full:ep1.pinkbike.org
+full:es.pinkbike.org
 parceljs.org
 full:static.opensuse.org
 full:open-vsx.org
@@ -2912,6 +2917,7 @@ full:img.xbooru.com
 full:website-prod.cache.wpscdn.com
 full:frontend-apps.workos.com
 full:cdn.workos.com
+wklcdn.com
 full:embed-cloudfront.wistia.com
 full:embed-ssl.wistia.com
 full:fast.wistia.com
