@@ -136,6 +136,8 @@ dmallcdn.com
 ## 微店
 geilicdn.com
 weidian.com
+## 货摊网
+huotan.net
 ## 聚美优品
 jmstatic.com
 jumei.com
@@ -494,6 +496,10 @@ yinxiang.com
 zhaopin.cn
 zhaopin.com
 
+# State Owned Companies
+include:chinapost
+include:sinopec
+
 # Tech companies & Orginations
 include:aisiku # 北京艾斯酷科技有限公司
 include:akiko # 秋子酱科技
@@ -636,7 +642,6 @@ qzhuye.com
 # Others
 include:8btc
 include:jibencaozuo
-include:sinopec
 
 # 应城门户网站
 chugou360.com
@@ -1404,7 +1409,6 @@ taoche.com
 te5.com
 tenxcloud.com
 thmnet.com # 粤ICP备10240765号-2
-tianjimedia.com
 tianlailive.com
 tianlala.com
 tietuku.com
@@ -1542,7 +1546,6 @@ yaolan.com
 yaoyl.com
 yaozh.com
 yeepay.com
-yesky.com
 yh31.com
 yigao.com
 yigoonet.com
@@ -1629,13 +1632,12 @@ zuowenwang.net
 zysou.com # 苏ICP备2024112174号-1
 zztfly.com
 
+# 爱赞助 粤ICP备18040645号
+azz.net
+
 # 京ICP备12006877号-1
-fm3838.com
-larsonlimited.com
 runsheng.com
 vzuu.com
-zoom3g.com
-zoomyou.cn
 
 # 酷家乐 杭州群核信息技术有限公司 浙ICP备12022366号-6
 kujiale.com
