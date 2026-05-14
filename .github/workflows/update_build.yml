@@ -339,11 +339,13 @@ jobs:
 
                     converted = convert(original)
 
-                    if (original ~ /@/) {
-                      print "TAG-LINE:", original > "/dev/stderr"
-                      print "IS-CN:", is_cn > "/dev/stderr"
-                      print "CONVERTED:", converted > "/dev/stderr"
-                    }
+
+                    # 输出调试信息，方便排查问题。只输出包含 @ 的行，其他行不输出。
+                    # if (original ~ /@/) {
+                    #   print "TAG-LINE:", original > "/dev/stderr"
+                    #   print "IS-CN:", is_cn > "/dev/stderr"
+                    #   print "CONVERTED:", converted > "/dev/stderr"
+                    # }
 
                     if (converted != "") {
                       if (!(converted in seen_all)) {
