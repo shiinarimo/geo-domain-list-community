@@ -163,146 +163,220 @@ jobs:
         run: |
           set -euo pipefail
 
-          # 批量处理所有 txt，排除已经生成的 @cn 文件
-          mapfile -t files < <(find . -type f -name "*.txt" ! -name "*@cn.txt")
+              mapfile -t files < <(find . -type f -name "*.txt" ! -name "*@cn.txt")
 
-          for file in "${files[@]}"; do
-            if [ ! -f "$file" ]; then
-              echo "Skip: $file not found"
-              continue
-            fi
+              for file in "${files[@]}"; do
+                if [ ! -f "$file" ]; then
+                  echo "Skip: $file not found"
+                  continue
+                fi
 
-            dir="$(dirname "$file")"
-            filename="$(basename "$file")"
-            stem="${filename%.txt}"
-            cn_file="${dir}/${stem}@cn.txt"
+                dir="$(dirname "$file")"
+                filename="$(basename "$file")"
+                stem="${filename%.txt}"
+                cn_file="${dir}/${stem}@cn.txt"
 
-            tmp_all="$(mktemp)"
-            tmp_cn="$(mktemp)"
+                tmp_all="$(mktemp)"
+                tmp_cn="$(mktemp)"
 
-            echo "Processing: $file"
+                echo "Processing: $file"
 
-            awk -v all="$tmp_all" -v cn="$tmp_cn" '
-              function trim(s) {
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
-                return s
-              }
-
-              function has_cn_tag(s) {
-                s = trim(s)
-
-                # 支持：
-                # example.com @cn
-                # example.com @ad @cn
-                # domain:example.com:@cn
-                # domain:example.com:@ad:@cn
-                # regexp:^xxx$:@cn
-                #
-                # 这里必须基于原始行判断，不能基于清洗后的内容判断。
-                return s ~ /(^|[[:space:]:])@cn([[:space:]:]|$)/
-              }
-
-              function remove_tags(s) {
-                s = trim(s)
-
-                # 删除空格形式 tag：
-                # example.com @ad @cn -> example.com
-                # domain:example.com @cn -> domain:example.com
-                #
-                # 注意这里不限于末尾，避免中间有多个 tag 处理不干净。
-                gsub(/[[:space:]]+@[A-Za-z0-9_!.-]+/, "", s)
-
-                # 删除冒号形式 tag：
-                # domain:example.com:@cn -> domain:example.com
-                # domain:example.com:@ad:@cn -> domain:example.com
-                while (s ~ /:@[A-Za-z0-9_!.-]+$/) {
-                  sub(/:@[A-Za-z0-9_!.-]+$/, "", s)
-                }
-
-                return trim(s)
-              }
-
-              function convert(original, raw, value) {
-                raw = remove_tags(original)
-
-                if (raw == "") {
-                  return ""
-                }
-
-                if (raw ~ /^domain:/) {
-                  value = raw
-                  sub(/^domain:/, "", value)
-                  return "DOMAIN-SUFFIX," value
-                }
-
-                if (raw ~ /^full:/) {
-                  value = raw
-                  sub(/^full:/, "", value)
-                  return "DOMAIN," value
-                }
-
-                if (raw ~ /^regexp:/) {
-                  value = raw
-                  sub(/^regexp:/, "", value)
-                  return "DOMAIN-REGEX," value
-                }
-
-                # 已经是 classical 格式时，保留
-                if (raw ~ /^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-REGEX),/) {
-                  return raw
-                }
-
-                # 裸域名
-                return "DOMAIN-SUFFIX," raw
-              }
-
-              {
-                original = $0
-
-                # 关键：先用原始行判断 @cn
-                is_cn = has_cn_tag(original)
-
-                if (is_cn) {
-                  print "CN:", original > "/dev/stderr"
-                }
-
-                # 再删除 @ad / @ads / @cn 等 tag，并转换成 classical
-
-
-                converted = convert(original)
-
-                if (converted != "") {
-                  if (!(converted in seen_all)) {
-                    print converted >> all
-                    seen_all[converted] = 1
+                awk -v all="$tmp_all" -v cn="$tmp_cn" '
+                  function trim(s) {
+                    gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
+                    return s
                   }
 
-                  if (is_cn && !(converted in seen_cn)) {
-                    print converted >> cn
-                    seen_cn[converted] = 1
+                  function has_cn_tag(s, t, n, arr, i) {
+                    t = s
+
+                    # 把常见分隔符都改成空格。
+                    # 这样：
+                    # example.com:@ads,@cn
+                    # example.com @ads @cn
+                    # example.com:@cn
+                    # 都能变成独立字段 @cn。
+                    gsub(/[,:[:space:]]+/, " ", t)
+
+                    n = split(t, arr, /[[:space:]]+/)
+
+                    for (i = 1; i <= n; i++) {
+                      if (arr[i] == "@cn") {
+                        return 1
+                      }
+                    }
+
+                    return 0
                   }
-                }
-              }
-            ' "$file"
 
-            mv "$tmp_all" "$file"
+                  function clean_tags(s) {
+                    s = trim(s)
 
-            if [ -s "$tmp_cn" ]; then
-              mv "$tmp_cn" "$cn_file"
-              echo "Created: $cn_file"
-            else
-              rm -f "$tmp_cn"
+                    # 删除所有 tag，包括：
+                    # @cn
+                    # @!cn
+                    # @ads
+                    # @ad
+                    #
+                    # 覆盖这些形式：
+                    # example.com @ads @cn
+                    # example.com:@ads,@cn
+                    # example.com:@!cn,@ads
+                    # domain:example.com:@cn
+                    # DOMAIN-SUFFIX,example.com:@ads,@cn
+                    #
+                    # 先把以 空格/冒号/逗号 开头的 tag 整段删掉。
+                    while (s ~ /(^|[[:space:]:,])@!?[A-Za-z0-9_.-]+/) {
+                      gsub(/(^|[[:space:]:,])@!?[A-Za-z0-9_.-]+/, "", s)
+                    }
 
-              if [ -f "$cn_file" ]; then
-                rm -f "$cn_file"
-                echo "Removed stale empty @cn file: $cn_file"
-              else
-                echo "No @cn rules found, skip creating: $cn_file"
-              fi
-            fi
+                    # 清理可能残留的分隔符
+                    gsub(/[[:space:]]+/, " ", s)
+                    gsub(/[[:space:]]*,[[:space:]]*/, ",", s)
+                    gsub(/[[:space:]]*:[[:space:]]*/, ":", s)
 
-            echo "Updated: $file"
-          done
+                    # 删除末尾残留的逗号或冒号
+                    sub(/[,:]+$/, "", s)
+
+                    return trim(s)
+                  }
+
+                  function first_field_after_comma(s, pos, rest, arr) {
+                    pos = index(s, ",")
+                    if (pos == 0) {
+                      return ""
+                    }
+
+                    rest = substr(s, pos + 1)
+
+                    # 注意：这里不要在清理 tag 前 split 逗号。
+                    # 因为 @cn 可能在逗号后面。
+                    # 先统一清理 tag。
+                    rest = clean_tags(rest)
+
+                    split(rest, arr, ",")
+
+                    return trim(arr[1])
+                  }
+
+                  function convert(original, raw, value, rule_type, pos) {
+                    raw = trim(original)
+
+                    if (raw == "") {
+                      return ""
+                    }
+
+                    # Clash classical 格式
+                    if (raw ~ /^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-REGEX),/) {
+                      pos = index(raw, ",")
+                      rule_type = substr(raw, 1, pos - 1)
+                      value = first_field_after_comma(raw)
+
+                      if (value == "") {
+                        return ""
+                      }
+
+                      return rule_type "," value
+                    }
+
+                    raw = clean_tags(raw)
+
+                    if (raw == "") {
+                      return ""
+                    }
+
+                    if (raw ~ /^domain:/) {
+                      value = raw
+                      sub(/^domain:/, "", value)
+                      value = clean_tags(value)
+
+                      if (value == "") {
+                        return ""
+                      }
+
+                      return "DOMAIN-SUFFIX," value
+                    }
+
+                    if (raw ~ /^full:/) {
+                      value = raw
+                      sub(/^full:/, "", value)
+                      value = clean_tags(value)
+
+                      if (value == "") {
+                        return ""
+                      }
+
+                      return "DOMAIN," value
+                    }
+
+                    if (raw ~ /^regexp:/) {
+                      value = raw
+                      sub(/^regexp:/, "", value)
+                      value = clean_tags(value)
+
+                      if (value == "") {
+                        return ""
+                      }
+
+                      return "DOMAIN-REGEX," value
+                    }
+
+                    value = clean_tags(raw)
+
+                    if (value == "") {
+                      return ""
+                    }
+
+                    return "DOMAIN-SUFFIX," value
+                  }
+
+                  {
+                    original = $0
+
+                    # 先判断原始整行是否有正向 @cn。
+                    # @!cn 不算 @cn。
+                    is_cn = has_cn_tag(original)
+
+                    converted = convert(original)
+
+                    if (original ~ /@/) {
+                      print "TAG-LINE:", original > "/dev/stderr"
+                      print "IS-CN:", is_cn > "/dev/stderr"
+                      print "CONVERTED:", converted > "/dev/stderr"
+                    }
+
+                    if (converted != "") {
+                      if (!(converted in seen_all)) {
+                        print converted >> all
+                        seen_all[converted] = 1
+                      }
+
+                      if (is_cn && !(converted in seen_cn)) {
+                        print converted >> cn
+                        seen_cn[converted] = 1
+                      }
+                    }
+                  }
+                ' "$file"
+
+                mv "$tmp_all" "$file"
+
+                if [ -s "$tmp_cn" ]; then
+                  mv "$tmp_cn" "$cn_file"
+                  echo "Created: $cn_file"
+                else
+                  rm -f "$tmp_cn"
+
+                  if [ -f "$cn_file" ]; then
+                    rm -f "$cn_file"
+                    echo "Removed stale empty @cn file: $cn_file"
+                  else
+                    echo "No @cn rules found, skip creating: $cn_file"
+                  fi
+                fi
+
+                echo "Updated: $file"
+              done
 
 
       - name: Git push assets to "release" branch
