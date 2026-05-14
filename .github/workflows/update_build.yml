@@ -157,6 +157,117 @@ jobs:
           xz -z -9 -k dlc.dat
           sha256sum dlc.dat.xz > dlc.dat.xz.sha256sum
 
+      # 将输出的列表转换为 Clash classical 规则，并提取包含 @cn 的规则到单独的 @cn 文件 
+      - name: Convert geosite rules to Clash classical rules and extract @cn rules
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # 需要处理的文件列表
+
+          mapfile -t files < <(find . -type f -name "*.txt" ! -name "*@cn.txt")
+
+          convert_line() {
+            local line="$1"
+            local value=""
+
+            # 去掉首尾空白
+            line="$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+
+            # 跳过空行
+            [ -z "$line" ] && return 0
+
+            # 去掉 geosite 属性标签，例如：
+            # domain:example.com:@cn -> domain:example.com
+            # full:api.example.com:@cn -> full:api.example.com
+            # regexp:^xxx$:@cn -> regexp:^xxx$
+            line="$(echo "$line" | sed 's/:\(@[A-Za-z0-9_!.-]\+\)\+$//')"
+
+            case "$line" in
+              domain:*)
+                value="${line#domain:}"
+
+                # geosite domain:example.com
+                # 转为 Clash classical:
+                # DOMAIN-SUFFIX,example.com
+                echo "DOMAIN-SUFFIX,${value}"
+                ;;
+
+              full:*)
+                value="${line#full:}"
+
+                # geosite full:api.example.com
+                # 转为 Clash classical:
+                # DOMAIN,api.example.com
+                echo "DOMAIN,${value}"
+                ;;
+
+              regexp:*)
+                value="${line#regexp:}"
+
+                # geosite regexp:^xxx$
+                # 转为 Mihomo / Clash.Meta classical:
+                # DOMAIN-REGEX,^xxx$
+                echo "DOMAIN-REGEX,${value}"
+                ;;
+
+              *)
+                # 兜底：如果原本就是裸域名，则按后缀域名处理
+                echo "DOMAIN-SUFFIX,${line}"
+                ;;
+            esac
+          }
+
+          for file in "${files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Skip: $file not found"
+              continue
+            fi
+
+            dir="$(dirname "$file")"
+            filename="$(basename "$file")"
+            stem="${filename%.txt}"
+            cn_file="${dir}/${stem}@cn.txt"
+
+            tmp_all="$(mktemp)"
+            tmp_cn="$(mktemp)"
+
+            echo "Processing: $file"
+
+            while IFS= read -r line || [ -n "$line" ]; do
+              # 跳过空行
+              if [ -z "$(echo "$line" | sed 's/[[:space:]]//g')" ]; then
+                continue
+              fi
+
+              converted="$(convert_line "$line")"
+
+              # 写入转换后的完整规则
+              if [ -n "$converted" ]; then
+                echo "$converted" >> "$tmp_all"
+              fi
+
+              # 原始行中包含 @cn 的，额外写入 @cn 文件
+              if echo "$line" | grep -q '@cn'; then
+                if [ -n "$converted" ]; then
+                  echo "$converted" >> "$tmp_cn"
+                fi
+              fi
+            done < "$file"
+
+            # 去重并排序后覆盖原文件
+            sort -u "$tmp_all" > "$file"
+
+            # 去重并排序后写入 @cn 文件
+            sort -u "$tmp_cn" > "$cn_file"
+
+            rm -f "$tmp_all" "$tmp_cn"
+
+            echo "Updated: $file"
+            echo "Created: $cn_file"
+          done
+
+
       - name: Git push assets to "release" branch
         run: |
           git init
