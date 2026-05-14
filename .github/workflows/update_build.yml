@@ -163,60 +163,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          # 需要处理的文件列表
-
           mapfile -t files < <(find . -type f -name "*.txt" ! -name "*@cn.txt")
-
-          convert_line() {
-            local line="$1"
-            local value=""
-
-            # 去掉首尾空白
-            line="$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
-
-            # 跳过空行
-            [ -z "$line" ] && return 0
-
-            # 去掉 geosite 属性标签，例如：
-            # domain:example.com:@cn -> domain:example.com
-            # full:api.example.com:@cn -> full:api.example.com
-            # regexp:^xxx$:@cn -> regexp:^xxx$
-            line="$(echo "$line" | sed 's/:\(@[A-Za-z0-9_!.-]\+\)\+$//')"
-
-            case "$line" in
-              domain:*)
-                value="${line#domain:}"
-
-                # geosite domain:example.com
-                # 转为 Clash classical:
-                # DOMAIN-SUFFIX,example.com
-                echo "DOMAIN-SUFFIX,${value}"
-                ;;
-
-              full:*)
-                value="${line#full:}"
-
-                # geosite full:api.example.com
-                # 转为 Clash classical:
-                # DOMAIN,api.example.com
-                echo "DOMAIN,${value}"
-                ;;
-
-              regexp:*)
-                value="${line#regexp:}"
-
-                # geosite regexp:^xxx$
-                # 转为 Mihomo / Clash.Meta classical:
-                # DOMAIN-REGEX,^xxx$
-                echo "DOMAIN-REGEX,${value}"
-                ;;
-
-              *)
-                # 兜底：如果原本就是裸域名，则按后缀域名处理
-                echo "DOMAIN-SUFFIX,${line}"
-                ;;
-            esac
-          }
 
           for file in "${files[@]}"; do
             if [ ! -f "$file" ]; then
@@ -234,34 +181,64 @@ jobs:
 
             echo "Processing: $file"
 
-            while IFS= read -r line || [ -n "$line" ]; do
-              # 跳过空行
-              if [ -z "$(echo "$line" | sed 's/[[:space:]]//g')" ]; then
-                continue
-              fi
+            awk -v all="$tmp_all" -v cn="$tmp_cn" '
+              function trim(s) {
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
+                return s
+              }
 
-              converted="$(convert_line "$line")"
+              function convert(line, raw, value) {
+                raw = trim(line)
 
-              # 写入转换后的完整规则
-              if [ -n "$converted" ]; then
-                echo "$converted" >> "$tmp_all"
-              fi
+                if (raw == "") {
+                  return ""
+                }
 
-              # 原始行中包含 @cn 的，额外写入 @cn 文件
-              if echo "$line" | grep -q '@cn'; then
-                if [ -n "$converted" ]; then
-                  echo "$converted" >> "$tmp_cn"
-                fi
-              fi
-            done < "$file"
+                while (raw ~ /:@[A-Za-z0-9_!.-]+$/) {
+                  sub(/:@[A-Za-z0-9_!.-]+$/, "", raw)
+                }
 
-            # 去重并排序后覆盖原文件
-            sort -u "$tmp_all" > "$file"
+                if (raw ~ /^domain:/) {
+                  value = raw
+                  sub(/^domain:/, "", value)
+                  return "DOMAIN-SUFFIX," value
+                }
 
-            # 去重并排序后写入 @cn 文件
-            sort -u "$tmp_cn" > "$cn_file"
+                if (raw ~ /^full:/) {
+                  value = raw
+                  sub(/^full:/, "", value)
+                  return "DOMAIN," value
+                }
 
-            rm -f "$tmp_all" "$tmp_cn"
+                if (raw ~ /^regexp:/) {
+                  value = raw
+                  sub(/^regexp:/, "", value)
+                  return "DOMAIN-REGEX," value
+                }
+
+                return "DOMAIN-SUFFIX," raw
+              }
+
+              {
+                line = $0
+                converted = convert(line)
+
+                if (converted != "") {
+                  if (!(converted in seen_all)) {
+                    print converted >> all
+                    seen_all[converted] = 1
+                  }
+
+                  if (line ~ /@cn/ && !(converted in seen_cn)) {
+                    print converted >> cn
+                    seen_cn[converted] = 1
+                  }
+                }
+              }
+            ' "$file"
+
+            mv "$tmp_all" "$file"
+            mv "$tmp_cn" "$cn_file"
 
             echo "Updated: $file"
             echo "Created: $cn_file"
