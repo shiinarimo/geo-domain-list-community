@@ -187,6 +187,31 @@ jobs:
                 return s
               }
 
+              function has_cn_tag(line) {
+                # 匹配独立 @cn 标签：
+                # domain:example.com:@cn
+                # domain:example.com:@ads:@cn
+                # example.com @ads @cn
+                # regexp:^xxx$:@cn
+                return line ~ /(^|[[:space:]:])@cn([[:space:]:]|$)/
+              }
+
+              function remove_tags(s) {
+                # 去掉空格分隔的 tag：
+                # example.com @ads @cn -> example.com
+                # domain:example.com @cn -> domain:example.com
+                gsub(/[[:space:]]+@[A-Za-z0-9_!.-]+/, "", s)
+
+                # 去掉冒号分隔的 tag：
+                # domain:example.com:@cn -> domain:example.com
+                # domain:example.com:@ads:@cn -> domain:example.com
+                while (s ~ /:@[A-Za-z0-9_!.-]+$/) {
+                  sub(/:@[A-Za-z0-9_!.-]+$/, "", s)
+                }
+
+                return trim(s)
+              }
+
               function convert(line, raw, value) {
                 raw = trim(line)
 
@@ -194,15 +219,11 @@ jobs:
                   return ""
                 }
 
-                # 去掉末尾 geosite 属性标签，例如：
-                # domain:example.com:@cn
-                # full:api.example.com:@ads
-                # regexp:^xxx$:@cn
-                #
-                # 支持多个标签：
-                # domain:example.com:@cn:@ads
-                while (raw ~ /:@[A-Za-z0-9_!.-]+$/) {
-                  sub(/:@[A-Za-z0-9_!.-]+$/, "", raw)
+                # 去掉所有 @xxx 标签，避免 @ads、@cn 等进入域名
+                raw = remove_tags(raw)
+
+                if (raw == "") {
+                  return ""
                 }
 
                 if (raw ~ /^domain:/) {
@@ -223,12 +244,18 @@ jobs:
                   return "DOMAIN-REGEX," value
                 }
 
+                # 如果已经是 classical 格式，尽量保持
+                if (raw ~ /^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-REGEX),/) {
+                  return raw
+                }
+
                 # 兜底：裸域名按 DOMAIN-SUFFIX 处理
                 return "DOMAIN-SUFFIX," raw
               }
 
               {
                 line = $0
+                is_cn = has_cn_tag(line)
                 converted = convert(line)
 
                 if (converted != "") {
@@ -237,7 +264,7 @@ jobs:
                     seen_all[converted] = 1
                   }
 
-                  if (line ~ /@cn/ && !(converted in seen_cn)) {
+                  if (is_cn && !(converted in seen_cn)) {
                     print converted >> cn
                     seen_cn[converted] = 1
                   }
