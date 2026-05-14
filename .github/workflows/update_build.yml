@@ -262,7 +262,13 @@ jobs:
                 # 关键：先用原始行判断 @cn
                 is_cn = has_cn_tag(original)
 
+                if (is_cn) {
+                  print "CN:", original > "/dev/stderr"
+                }
+
                 # 再删除 @ad / @ads / @cn 等 tag，并转换成 classical
+
+
                 converted = convert(original)
 
                 if (converted != "") {
@@ -297,7 +303,6 @@ jobs:
 
             echo "Updated: $file"
           done
-
 
 
       - name: Git push assets to "release" branch
