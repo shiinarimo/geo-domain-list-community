@@ -163,6 +163,7 @@ jobs:
         run: |
           set -euo pipefail
 
+          # 批量处理所有 txt，排除已经生成的 @cn 文件
           mapfile -t files < <(find . -type f -name "*.txt" ! -name "*@cn.txt")
 
           for file in "${files[@]}"; do
@@ -187,24 +188,33 @@ jobs:
                 return s
               }
 
-              function has_cn_tag(line) {
-                # 匹配独立 @cn 标签：
+              function has_cn_tag(s) {
+                s = trim(s)
+
+                # 支持：
+                # example.com @cn
+                # example.com @ad @cn
                 # domain:example.com:@cn
-                # domain:example.com:@ads:@cn
-                # example.com @ads @cn
+                # domain:example.com:@ad:@cn
                 # regexp:^xxx$:@cn
-                return line ~ /(^|[[:space:]:])@cn([[:space:]:]|$)/
+                #
+                # 这里必须基于原始行判断，不能基于清洗后的内容判断。
+                return s ~ /(^|[[:space:]:])@cn([[:space:]:]|$)/
               }
 
               function remove_tags(s) {
-                # 去掉空格分隔的 tag：
-                # example.com @ads @cn -> example.com
+                s = trim(s)
+
+                # 删除空格形式 tag：
+                # example.com @ad @cn -> example.com
                 # domain:example.com @cn -> domain:example.com
+                #
+                # 注意这里不限于末尾，避免中间有多个 tag 处理不干净。
                 gsub(/[[:space:]]+@[A-Za-z0-9_!.-]+/, "", s)
 
-                # 去掉冒号分隔的 tag：
+                # 删除冒号形式 tag：
                 # domain:example.com:@cn -> domain:example.com
-                # domain:example.com:@ads:@cn -> domain:example.com
+                # domain:example.com:@ad:@cn -> domain:example.com
                 while (s ~ /:@[A-Za-z0-9_!.-]+$/) {
                   sub(/:@[A-Za-z0-9_!.-]+$/, "", s)
                 }
@@ -212,15 +222,8 @@ jobs:
                 return trim(s)
               }
 
-              function convert(line, raw, value) {
-                raw = trim(line)
-
-                if (raw == "") {
-                  return ""
-                }
-
-                # 去掉所有 @xxx 标签，避免 @ads、@cn 等进入域名
-                raw = remove_tags(raw)
+              function convert(original, raw, value) {
+                raw = remove_tags(original)
 
                 if (raw == "") {
                   return ""
@@ -244,19 +247,23 @@ jobs:
                   return "DOMAIN-REGEX," value
                 }
 
-                # 如果已经是 classical 格式，尽量保持
+                # 已经是 classical 格式时，保留
                 if (raw ~ /^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-REGEX),/) {
                   return raw
                 }
 
-                # 兜底：裸域名按 DOMAIN-SUFFIX 处理
+                # 裸域名
                 return "DOMAIN-SUFFIX," raw
               }
 
               {
-                line = $0
-                is_cn = has_cn_tag(line)
-                converted = convert(line)
+                original = $0
+
+                # 关键：先用原始行判断 @cn
+                is_cn = has_cn_tag(original)
+
+                # 再删除 @ad / @ads / @cn 等 tag，并转换成 classical
+                converted = convert(original)
 
                 if (converted != "") {
                   if (!(converted in seen_all)) {
@@ -272,17 +279,14 @@ jobs:
               }
             ' "$file"
 
-            # 覆盖原文件
             mv "$tmp_all" "$file"
 
-            # 只有存在 @cn 条目时，才生成 @cn 文件
             if [ -s "$tmp_cn" ]; then
               mv "$tmp_cn" "$cn_file"
               echo "Created: $cn_file"
             else
               rm -f "$tmp_cn"
 
-              # 如果之前生成过旧的 @cn 文件，这里删除，避免残留过期内容
               if [ -f "$cn_file" ]; then
                 rm -f "$cn_file"
                 echo "Removed stale empty @cn file: $cn_file"
@@ -293,6 +297,7 @@ jobs:
 
             echo "Updated: $file"
           done
+
 
 
       - name: Git push assets to "release" branch
