@@ -194,6 +194,13 @@ jobs:
                   return ""
                 }
 
+                # 去掉末尾 geosite 属性标签，例如：
+                # domain:example.com:@cn
+                # full:api.example.com:@ads
+                # regexp:^xxx$:@cn
+                #
+                # 支持多个标签：
+                # domain:example.com:@cn:@ads
                 while (raw ~ /:@[A-Za-z0-9_!.-]+$/) {
                   sub(/:@[A-Za-z0-9_!.-]+$/, "", raw)
                 }
@@ -216,6 +223,7 @@ jobs:
                   return "DOMAIN-REGEX," value
                 }
 
+                # 兜底：裸域名按 DOMAIN-SUFFIX 处理
                 return "DOMAIN-SUFFIX," raw
               }
 
@@ -237,11 +245,26 @@ jobs:
               }
             ' "$file"
 
+            # 覆盖原文件
             mv "$tmp_all" "$file"
-            mv "$tmp_cn" "$cn_file"
+
+            # 只有存在 @cn 条目时，才生成 @cn 文件
+            if [ -s "$tmp_cn" ]; then
+              mv "$tmp_cn" "$cn_file"
+              echo "Created: $cn_file"
+            else
+              rm -f "$tmp_cn"
+
+              # 如果之前生成过旧的 @cn 文件，这里删除，避免残留过期内容
+              if [ -f "$cn_file" ]; then
+                rm -f "$cn_file"
+                echo "Removed stale empty @cn file: $cn_file"
+              else
+                echo "No @cn rules found, skip creating: $cn_file"
+              fi
+            fi
 
             echo "Updated: $file"
-            echo "Created: $cn_file"
           done
 
 
