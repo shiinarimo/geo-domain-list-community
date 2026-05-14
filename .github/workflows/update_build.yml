@@ -125,7 +125,7 @@ jobs:
       - name: Build dlc.dat and plain lists
         run: |
           cd code || exit 1
-          go run ./ --outputdir=../ --exportlists=reject-list,cn,dns-unlock,category-entertainment,emby-s
+          go run ./ --outputdir=../ --exportlists=reject-list,user-games,nojp-proxy,normal-proxy,emby-s,dns-proxy,dns-1stream-jp,dns-1stream-tw,user-games@cn,user-PCgame,user-Mobilegame,cdn,dns-unlock
           go run ./cmd/datdump/main.go --inputdata=../dlc.dat --outputdir=../ --exportlists=_all_
           # cd ../ && rm -rf code
         
