@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-05-14T09:28:31.353Z
-# Size: 4471
+# Last Updated: 2026-05-16T15:21:58.325Z
+# Size: 4477
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1653,6 +1653,7 @@ full:pics.serviporno.com
 cdn.serverable.com
 sentry-cdn.com
 full:static-www.sendsafely.com
+full:app-static.sendsafely.com
 full:assets.sendinblue.com
 sbcdnvideo.com
 full:resources.help.salesforce.com
@@ -2416,6 +2417,7 @@ full:cdn3.edgedatg.com
 full:cdn2.edgedatg.com
 full:cdn1.edgedatg.com
 ipfs.ecolatam.com
+cdn.easyling.com
 full:vip.dytt-img.com
 drivecdn.com
 full:cdn.dribbble.com
@@ -3645,6 +3647,9 @@ full:resource.fs.com
 full:img-en.fs.com
 full:media.fs.com
 full:genesis-cdn.ff.com
+full:cdn.studio.f5.com
+tags.f5.com
+full:cdn.f5.com
 full:media.contentapi.ea.com
 full:cdn.mcr.ea.com
 full:pl.ea.com
@@ -3761,6 +3766,7 @@ full:img.4gamers.com.tw
 full:event.ithome.com.tw
 full:static.cnbeta.com.tw
 full:image.yuntu.com.tw
+full:i.meee.com.tw
 full:pgw.udn.com.tw
 full:s.udn.com.tw
 full:p.udn.com.tw
