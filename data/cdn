@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-05-16T15:21:58.325Z
-# Size: 4477
+# Last Updated: 2026-05-26T15:09:49.330Z
+# Size: 4482
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -426,6 +426,7 @@ full:godoc.org
 full:tileserver.gnome.org
 full:static.gnome.org
 eggjs.org
+full:error.c.cdn77.org
 hits.b3log.org
 full:static.arxiv.org
 91pic.org
@@ -3408,6 +3409,7 @@ full:static.fc2cn.com
 fbsbx.com
 fbcdn.com
 full:cdn.faire.com
+f-cdn.com
 full:img.etimg.com
 full:dz2cdn1.dzone.com
 drtst.com
@@ -4118,6 +4120,7 @@ ipfs.filebase.io
 ipfs.denarius.io
 full:assets.customer.io
 rum.cronitor.io
+fonts.coollabs.io
 cloudimg.io
 full:static.assetlab.io
 full:code.upscope.io
@@ -4459,6 +4462,7 @@ full:sdk.customfit.ai
 full:static.returngo.ai
 full:prod-cdn.webtune.ai
 full:cms.mistral.ai
+full:widget.prod.equally.ai
 full:widget.docsbot.ai
 full:cdn.aimerce.ai
 full:static.zanmei.ai
@@ -4478,6 +4482,7 @@ full:cdn1.suno.ai
 full:cdn.roof.ai
 full:metrics.kapa.ai
 full:widget.kapa.ai
+full:cdn.gist.ai
 full:cdn.fera.ai
 full:assets-docs.dify.ai
 full:assets.dify.ai
