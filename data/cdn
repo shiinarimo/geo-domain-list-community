@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-05-26T15:09:49.330Z
-# Size: 4482
+# Last Updated: 2026-06-15T02:41:55.598Z
+# Size: 4501
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -366,6 +366,7 @@ full:ep1.pinkbike.org
 full:es.pinkbike.org
 parceljs.org
 full:static.opensuse.org
+full:assets.openlogi.org
 full:open-vsx.org
 full:images.mobilism.org
 full:demotiles.maplibre.org
@@ -396,6 +397,7 @@ lsposed.org
 full:pcz.javidol.org
 haproxy.org
 graphql.org
+full:imgproxy.flathub.org
 full:web-static.archive.org
 full:image.ap-mail.org
 99avcdn.org
@@ -512,6 +514,7 @@ storage.yandexcloud.net
 full:images.wurstclient.net
 full:images.wsjcommerce.net
 full:static.underhentai.net
+full:assets.transfernow.net
 tapecontent.net
 staticworld.net
 staticstack.net
@@ -589,6 +592,7 @@ full:edge-consumer-static.azureedge.net
 full:edge-mobile-static.azureedge.net
 full:edgeassetservice.azureedge.net
 edgestorewebcdn.azureedge.net
+full:catalogartifact.azureedge.net
 full:xpaywalletcdn.azureedge.net
 full:claritystatic.azureedge.net
 full:mobilecenter.azureedge.net
@@ -621,6 +625,7 @@ full:static.whatsapp.net
 full:cdn.viafoura.net
 turboimg.net
 tildacdn.net
+t-assets.net
 full:cdn.pi.spectrum.net
 smassets.net
 sitescdn.net
@@ -1014,6 +1019,7 @@ steamusercontent.com
 spreadshirtmedia.com
 full:static2.sharepointonline.com
 full:cdn.seonintelligence.com
+full:uploadcare.mwcglobalprofile.com
 full:assets4.mist-train-girls.com
 full:hubspotonwebflow.com
 hsbrowserreports.com
@@ -1534,6 +1540,7 @@ fontawesome.com
 full:cdn.fluidplayer.com
 firebaseapp.com
 full:google-ohttp-relay-safebrowsing.fastly-edge.com
+full:mozilla-ohttp.fastly-edge.com
 full:ohttp-relay1.fastly-edge.com
 full:live.fanmingming.com
 full:assets.embeddables.com
@@ -1695,6 +1702,7 @@ full:tags.nationwide.com
 myspacecdn.com
 full:r2cdn.myshopline.com
 myshopapps.com
+full:cdn.myopenpass.com
 full:cdn.myfutanari.com
 myfilebase.com
 msftstatic.com
@@ -2265,6 +2273,7 @@ full:assets.quillbot.com
 full:libs.quillbot.com
 full:js-s3.quickcep.com
 full:api.qrserver.com
+full:uploads.pullfrog.com
 full:static.pornpics.com
 full:cdni.pornpics.com
 porn-cdn.com
@@ -2331,6 +2340,7 @@ full:c.marsflag.com
 full:media.maptiler.com
 full:cdn.maptiler.com
 full:tiles.mapilion.com
+full:b.manufact.com
 full:imag.malavida.com
 full:img-api.mac4ever.com
 lowescdn.com
@@ -2344,6 +2354,7 @@ full:assets.leetcode.com
 full:cdn.leandata.com
 ldstatic.com
 lbpicpic.com
+full:ph.langfuse.com
 kirafile.com
 full:img.kbhgames.com
 full:cdn.jwplayer.com
@@ -2426,6 +2437,7 @@ full:cdn.dnsimple.com
 full:cdn-node.diskpart.com
 full:cacerts.digicert.com
 full:ocsp.digicert.com
+full:crl3.digicert.com
 full:avatars.dicebear.com
 full:api.dicebear.com
 dditscdn.com
@@ -2924,7 +2936,7 @@ full:img.xhacgn.com
 full:img.xbooru.com
 full:website-prod.cache.wpscdn.com
 full:frontend-apps.workos.com
-full:cdn.workos.com
+cdn.workos.com
 wklcdn.com
 full:embed-cloudfront.wistia.com
 full:embed-ssl.wistia.com
@@ -3173,6 +3185,7 @@ full:s3.go2778.com
 full:static.gmgard.com
 glbimg.com
 full:tuf-repo.github.com
+full:cafe.github.com
 full:raw.github.com
 pkg.github.com
 full:assets.genius.com
@@ -3193,6 +3206,7 @@ full:embedr.flickr.com
 full:s1.feedly.com
 full:assets.fastly.com
 ezocdn.com
+full:cdn.evgnet.com
 full:s3.envato.com
 full:creative.eizzih.com
 full:videos2.edclub.com
@@ -3227,6 +3241,7 @@ media.beeper.com
 full:static.beebom.com
 full:www.bbthat.com
 bblcdn.com
+full:static.captcha.awswaf.com
 avximg.com
 full:tiledbasemaps.arcgis.com
 full:tiles.arcgis.com
@@ -3441,6 +3456,7 @@ full:designsystem.brevo.com
 full:corp-backend.brevo.com
 full:assets.brevo.com
 full:safebrowsing.brave.com
+full:variations.brave.com
 full:imgs.search.brave.com
 full:cdn.search.brave.com
 full:static.bodor.com
@@ -3783,6 +3799,8 @@ storry.tv
 full:starlight.nebula.tv
 full:images.nebula.tv
 full:f.upanh.tv
+full:walter-r2.trakt.tv
+full:media.trakt.tv
 full:static.tella.tv
 full:static-homepage-en.pluto.tv
 full:images.pluto.tv
@@ -4008,6 +4026,7 @@ full:resource.video.nimg.jp
 cdn.nimg.jp
 full:i.gzn.jp
 full:tiles.gsj.jp
+img.gmo.jp
 full:nav.yumenosora.co.jp
 full:web-assets.zendesk.co.jp
 full:cdn.rex.contents.rakuten.co.jp
