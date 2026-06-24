@@ -48,6 +48,7 @@ include:nbcuniversal
 include:neowin
 include:newscorp
 include:newsmax
+include:nhk
 include:nikkan-gendai
 include:nikkei
 include:now
@@ -55,6 +56,8 @@ include:nytimes
 include:oan
 include:realclear
 include:rferl
+include:rossiyasegodnya
+include:rt
 include:rthk
 include:sankei
 include:scmp
@@ -112,6 +115,7 @@ hkcnews.com
 hkej.com
 hkgpao.com
 hongkongfp.com
+infoq.com
 inmediahk.net
 inquirer.net
 inside.com.tw
@@ -142,7 +146,6 @@ realvision.com
 rfa.org
 rfi.fr
 rsf.org
-rt.com
 rtings.com
 shuziyimin.org
 singpao.com.hk

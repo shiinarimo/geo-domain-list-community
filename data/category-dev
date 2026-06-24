@@ -9,6 +9,7 @@ include:category-container
 include:codeberg
 include:dart
 include:debian
+include:discourse
 include:docker
 include:embedly
 include:facebook-dev
@@ -57,14 +58,18 @@ include:thelinuxfoundation
 include:tilda
 include:unity
 include:v8
+include:wordpress
 
 adventofcode.com
+almalinux.org
 alpinelinux.org
 apache.org
 artixlinux.org
 atom.io
 badgen.net
 bitvise.com
+bugsnag.com
+busybox.net
 centos.org
 chocolatey.org
 clojure.org
@@ -80,12 +85,14 @@ elixir-lang.org
 elrepo.org
 erlang.org
 ffmpeg.org
+filezilla-project.org
 freebsd.org
 gentoo.org
 getcomposer.org
 getpaint.net
 getzola.org
 git-scm.com
+gitgud.io
 gnome.org
 gnu.org
 godbolt.org
@@ -104,11 +111,13 @@ linuxmint.com
 lua.org
 lxqt-project.org
 macports.org
+manjaro.org
 mariadb.org
 mate-desktop.org
 mingw.org
 mobatek.net
 mpv.io
+msys2.org
 mysql.com
 neovim.io
 netfilter.org
@@ -136,6 +145,7 @@ raspberrypi.org
 raspbian.org
 regex101.com
 remirepo.net
+rockylinux.org
 rpmfusion.org
 scientificlinux.org
 scoop.sh
@@ -162,3 +172,9 @@ xposed.info
 yarnpkg.com
 ziglang.org
 zsh.org
+
+# WordPress plugins
+elegantthemes.com
+hivepress.io
+motopress.com
+wpmailsmtp.com

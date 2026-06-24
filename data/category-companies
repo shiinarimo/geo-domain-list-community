@@ -4,6 +4,7 @@ include:2gis
 include:acer
 include:adobe
 include:alibabacloud
+include:alphabet
 include:amazon
 include:amd
 include:anexia
@@ -37,7 +38,6 @@ include:giffgaff
 include:gigabyte
 include:gmo-internet
 include:godaddy
-include:google
 include:group-ib
 include:headhunter
 include:hetzner
@@ -73,6 +73,7 @@ include:musixmatch
 include:mxroute
 include:naver
 include:neuralink
+include:nic-ru
 include:nvidia
 include:openweather
 include:oracle
@@ -84,6 +85,7 @@ include:qnap
 include:qualcomm
 include:qwant
 include:razer
+include:regru
 include:rostelecom
 include:salesforce
 include:samsung
@@ -109,6 +111,7 @@ include:verizon
 include:vultr
 include:westerndigital
 include:wisekey
+include:xtom
 include:yahoo
 include:yandex
 include:zscaler

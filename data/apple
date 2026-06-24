@@ -860,7 +860,7 @@ full:s4.mzstatic.com @cn
 full:s5.mzstatic.com @cn
 
 # The rules below are from https://github.com/felixonmars/dnsmasq-china-list/blob/master/apple.china.conf
-# Revision: f6a2093b254a7d2baca959bd16581666ca394303
+# Revision: c3c9839e5e71f04fc170b5645d7a162631985e2d
 # Duplicates removed
 # According to the consensus in #503, do not include the domain name apps.apple.com directly.
 # Use in config file like this: "geosite:apple@cn"
@@ -879,6 +879,7 @@ full:cds.apple.com @cn
 full:cds.apple.com.akadns.net @cn
 full:cdsassets.apple.com @cn
 full:cl2-cn.apple.com @cn
+full:cl2.apple.com.edgekey.net.globalredir.akadns.net @cn
 full:cl4-cn.apple.com @cn
 full:clientflow.apple.com @cn
 full:clientflow.apple.com.akadns.net @cn
@@ -896,6 +897,7 @@ full:experiments.apple.com @cn
 full:gs-loc-cn.apple.com @cn
 full:gs-loc.apple.com @cn
 full:gsp10-ssl-cn.ls.apple.com @cn
+full:gsp11-cn.ls.apple.com @cn
 full:gsp12-cn.ls.apple.com @cn
 full:gsp13-cn.ls.apple.com @cn
 full:gsp4-cn.ls.apple.com @cn
@@ -913,8 +915,6 @@ full:gspe79-cn-ssl.ls.apple.com @cn
 full:guzzoni-apple-com.v.aaplimg.com @cn
 full:guzzoni.apple.com @cn
 full:guzzoni.smoot.apple.com @cn
-full:icloud-cdn.icloud.com.akadns.net @cn
-full:icloud.cdn-apple.com @cn
 full:images.apple.com.edgekey.net.globalredir.akadns.net @cn
 full:init-kt.apple.com @cn
 full:init-p01md-lb.push-apple.com.akadns.net @cn
@@ -932,6 +932,7 @@ full:is-ssl.mzstatic.com-cn-lb.itunes-apple.com.akadns.net @cn
 full:itunes-apple.com.akadns.net @cn
 full:itunes.apple.com @cn
 full:itunesconnect.apple.com @cn
+full:mensura.cdn-apple.com @cn
 full:mesu-cdn.apple.com.akadns.net @cn
 full:mesu-china.apple.com.akadns.net @cn
 full:mesu.apple.com @cn
@@ -941,12 +942,10 @@ full:oscdn.apple.com @cn
 full:oscdn.origin-apple.com.akadns.net @cn
 full:osxapps.itunes.g.aaplimg.com @cn
 full:pancake.apple.com @cn
-full:pancake.cdn-apple.com.akadns.net @cn
 full:pba0.apple.com @cn
 full:probe.siri.apple.com @cn
 full:prod-support.apple-support.akadns.net @cn
 full:publicassets.cdn-apple.com @cn
-full:reserve-prime.apple.com @cn
 full:seed-sequoia.siri.apple.com @cn
 full:seed-swallow.siri.apple.com @cn
 full:seed.siri.apple.com @cn
