@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-06-15T02:41:55.598Z
-# Size: 4501
+# Last Updated: 2026-06-24T05:48:35.635Z
+# Size: 4523
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -312,6 +312,7 @@ full:play.publicradio.org
 tile.opentopomap.org
 full:covers.openlibrary.org
 full:tiles.openfreemap.org
+full:dlstats.izzyondroid.org
 full:media.hentaifreak.org
 ipfs.genenetwork.org
 full:ximage.c-spanvideo.org
@@ -849,6 +850,7 @@ full:static.plus.net
 ipfs.mttk.net
 loli.net
 full:texture.laby.net
+full:cdn1.espn.net
 full:static1.e621.net
 c-dn.net
 full:static.blip.net
@@ -1085,6 +1087,8 @@ full:img.washingtonpost.com
 warnermediacdn.com
 full:static.global.visioncritical.com
 full:static.na1.visioncritical.com
+full:stories.usestoryteller.com
+cdn.usestoryteller.com
 trafficdeposit.com
 full:media.telanganatoday.com
 full:image.telanganatoday.com
@@ -1204,6 +1208,7 @@ full:telemetry.individual.githubcopilot.com
 full:telemetry.business.githubcopilot.com
 gamesgamescdn.com
 gadgets360cdn.com
+full:fullstackopen.com
 full:rts-static-prod.freshworksapi.com
 full:cdn.freebiesupply.com
 full:images.flightradar24.com
@@ -1305,6 +1310,7 @@ full:clientstream.launchdarkly.com
 full:clientsdk.launchdarkly.com
 full:static.launchdarkly.com
 full:events.launchdarkly.com
+larksuitepkg.com
 full:lf16-larkversion.larksuitecdn.com
 full:sf19-scmcdn.larksuitecdn.com
 full:p16-hera-va.larksuitecdn.com
@@ -1532,6 +1538,8 @@ full:media.gettyimages.com
 cdn.getfeedback.com
 full:assets.gemcommerce.com
 gauthstatic.com
+full:static.fundraiseup.com
+full:cdn.fundraiseup.com
 full:stories.freepiklabs.com
 full:static.foxbusiness.com
 full:use.fortawesome.com
@@ -1814,6 +1822,7 @@ full:assets.dictionary.com
 descopecdn.com
 full:cdn.delight-vr.com
 full:static.websites.data-crypt.com
+cursor-cdn.com
 full:static-beta.curseforge.com
 full:images.crunchbase.com
 full:cdn.conveythis.com
@@ -1895,6 +1904,7 @@ xhpingcdn.com
 xdaimages.com
 full:cdn.scripts.wtwhmedia.com
 wowmodels.com
+workoscdn.com
 full:hhhhhhome86227170.wordpress.com
 full:jetpack.wordpress.com
 files.wordpress.com
@@ -2107,6 +2117,7 @@ embedgram.com
 full:static.assets-stash.eet-china.com
 design-system.economist.com
 full:marber-cdn.economist.com
+full:wall-ui-cdn.p.aws.economist.com
 full:cmp-cdn.p.aws.economist.com
 dummyjson.com
 dubassets.com
@@ -2634,7 +2645,9 @@ full:cdn.readmoo.com
 full:cdn-rdstaticassets.readdle.com
 ravenjs.com
 full:static.rakuten.com
+full:luminaire.railway.com
 full:devicons.railway.com
+full:cms.railway.com
 rackcdn.com
 full:cdn.quadpay.com
 pxlecdn.com
@@ -2643,8 +2656,7 @@ full:st.prntscr.com
 full:cdn.privacy.com
 full:app-static-prod.posthog.com
 full:app-static.eu.posthog.com
-full:us-assets.i.posthog.com
-full:eu-assets.i.posthog.com
+i.posthog.com
 full:cdn77-t.pornoxo.com
 full:cdn77.pornoxo.com
 full:pics.pornfhd.com
@@ -2660,6 +2672,7 @@ full:www.pngmart.com
 full:cdn-main.plus500.com
 full:cdn.plus500.com
 full:cdn.pixabay.com
+full:assets.pingone.com
 full:static.pingcap.com
 phprcdn.com
 full:hawky.pcgamer.com
@@ -2764,6 +2777,7 @@ full:perf.hsforms.com
 full:static.hosting.com
 hgimg01.com
 hgimg00.com
+full:hentai0.com
 full:static.heavy-r.com
 full:public.hare200.com
 hardbin.com
@@ -2859,7 +2873,9 @@ full:static.comicbz.com
 full:image.comicbz.com
 full:cover.comicbz.com
 full:css.comicbz.com
+full:unleash.codeium.com
 full:player-frontend.cnevids.com
+full:embed-audio.cnevids.com
 full:player.cnevids.com
 cmail20.com
 cmail19.com
@@ -2935,6 +2951,7 @@ full:cdn.xvidzz.com
 full:img.xhacgn.com
 full:img.xbooru.com
 full:website-prod.cache.wpscdn.com
+full:frontend-apps-multi-region.workos.com
 full:frontend-apps.workos.com
 cdn.workos.com
 wklcdn.com
@@ -3101,6 +3118,7 @@ full:img.mresou.com
 full:static-main.moovit.com
 full:static.moomoo.com
 full:launchercontent.mojang.com
+full:bytescale.mobbin.com
 mngbcn.com
 mmtcdn.com
 full:img.ml0987.com
@@ -3556,6 +3574,7 @@ full:cms-cdn.goat.com
 full:assets.goat.com
 full:image.goat.com
 fsdn.com
+full:digitalhub.fifa.com
 full:img04.en25.com
 full:images.dmca.com
 full:website-media.deel.com
@@ -4159,6 +4178,7 @@ pagecdn.io
 full:favicons.nextdns.io
 full:cdn.logbase.io
 full:media.lantern.io
+full:embed.lantern.io
 full:cdn.ipwhois.io
 ipfscdn.io
 full:cdn.icomoon.io
@@ -4350,6 +4370,7 @@ full:tile.mtbmap.cz
 full:mapserver.mapy.cz
 ipfs.slang.cx
 zpi.cx
+full:img.kemono.cr
 full:assets.openalternative.co
 full:cdn.stackoverflow.co
 cdn-lfs-us-1.huggingface.co
@@ -4375,6 +4396,7 @@ smilecdn.co
 ipfs.sloppyta.co
 full:assets.jolipage.co
 full:cdn.jolipage.co
+full:assets.churnkey.co
 full:cdn.inviter.co
 doodcdn.co
 full:img.decrypt.co
