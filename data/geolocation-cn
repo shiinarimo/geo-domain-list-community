@@ -45,6 +45,8 @@ include:everbright
 include:pingan @-!cn
 include:taikang
 
+## 北汽金融
+baicaf.com
 ## 航财通·校园付
 cc-pay.cn
 ## 易鑫金融
@@ -85,6 +87,13 @@ include:yunfanjiasu
 
 ## 深圳市百悦通信
 100ycdn.com
+## 文派科技
+admincdn.com
+cravatar.cn
+cravatar.com
+wenpai.org
+windfonts.com
+wpcy.com
 ## 百家云
 baijiayun.com
 ## 123 云盘 CDN
@@ -112,13 +121,21 @@ pkoplink.com
 ## 速方云
 suufun.com
 suu-fun.com
+## 亿速云
+yisu.com
 
 # Cloud Service
 ## 华栖云
 chinamcloud.com
+## CmsTop 媒体云
+cjyun.org
 ## 安徽大家网络科技
 cnwza.cn
 govwza.cn
+## 新空云
+newaircloud.com
+## 趣看科技
+quklive.com
 ## 广州润雨科技有限公司 粤ICP备19052839号
 rainyun.com
 ## 深圳市狐蒂云网络科技有限公司 粤ICP备2025387186号-1
@@ -162,6 +179,9 @@ azz.net
 btghotels.com
 bthhotels.com
 homeinns.com
+## 嘀嗒出行
+didachuxing.com
+didapinche.com
 ## 多点新鲜
 dmall.com
 dmallcdn.com
@@ -201,6 +221,9 @@ kujiale.com
 ## 银泰百货
 intime.com.cn
 linkheer.com
+## 法律快车
+lawtime.cn
+lawtimeimg.com
 ## 慢慢买
 manmanbuy.com
 ## 美物清单
@@ -306,6 +329,12 @@ haodf.com
 hdfimg.com
 ## 江苏健康通
 jsehealth.com
+## 民福康
+39yst.com
+mfk.com
+## 妙手医生
+miaoshou.net
+miaoshoucdn.com
 ## 仁科医疗科技有限公司服务域名，为北大口腔和一些其他国内医院小程序提供服务
 mingxuan.store
 ## 爱问医生
@@ -318,6 +347,7 @@ youlai.cn
 # Party and government offices & Public units
 12315.cn
 12321.cn
+12377.cn
 gov.cn
 ## 中华全国总工会
 acftu.org
@@ -405,6 +435,10 @@ ccrgt.com
 bmac.com.cn
 ## 车来了
 chelaile.net.cn
+## 活力智汇/高铁管家/航班管家
+133.cn
+gtgjtrip.com
+rsscc.cn
 ## 跨境巴士
 kuajing84.com
 ## 掌上公交
@@ -494,6 +528,8 @@ include:zhubajie
 air-matters.com
 ## Alook 浏览器
 alookweb.com
+## AniXPlayer
+anixplayer.net
 ## 安兔兔
 antutu.com
 antutu.net
@@ -532,6 +568,8 @@ duanshu.com
 ## 兑吧
 dui88.com
 duiba.com.cn
+## 旷视科技（人脸识别）
+faceid.com
 ## 方正字库
 foundertype.com
 ## 发现报告
@@ -609,11 +647,16 @@ wenjuan.com
 xbext.com
 ## 印象笔记
 yinxiang.com
+## 云片
+yunpian.com
 ## 在行
 zaih.com
 ## 智联招聘
 zhaopin.cn
 zhaopin.com
+## 最美天气
+zmtqsh.cn
+zmtqsh.com
 
 ## 上海东方怡动信息技术有限公司
 ewdcloud.com
@@ -630,6 +673,7 @@ include:aisiku # 北京艾斯酷科技有限公司
 include:akiko # 秋子酱科技
 include:alibaba @-!cn
 include:anker @-!cn
+include:aux @-!cn # 奥克斯集团
 include:baidu
 include:beisen
 include:bluepoch
@@ -692,6 +736,7 @@ erp198.com
 sunrocks.cn
 ## 知道创宇
 anquan.org
+hackernews.cc
 knownsec.com
 yunaq.com
 ## 曹操出行
@@ -702,10 +747,22 @@ cfp.cn
 ishijue.com
 vcg.com
 vcgapi.com
+## 视源/视臻/视睿
+cvte.com
+maxhub.com
+seewo.com
 ## 飞牛
 fnnas.com
 fnnas.net
 fnos.net
+## 咕咕数据
+gugudata.com
+## 二三四五
+2345.cc
+2345.cn
+2345.com
+2345cdn.net
+hao774.com
 ## 稿定（厦门）信息服务有限公司
 ### 花瓣网 闽ICP备2021013850号
 huaban.com
@@ -719,6 +776,10 @@ xsbapp.cn
 ## 凯迪仕
 juziwulian.com
 kaadas.com
+## UGREEN绿联
+lulian.cn
+ugnas.cloud
+ugnas.com
 ## 微步在线 / 步刻科技
 onedns.net
 #safeskill.cn
@@ -755,6 +816,7 @@ anytocopy.com
 ## 华为手表HDC工具箱 鄂ICP备2025146053号
 osbdf.com
 
+boce.com # 拨测 闽ICP备11028257号-28
 chaziyu.com # 滇ICP备2024035496号
 fofa.info # Fofa网站测绘（华顺信安）
 icplishi.com # 粤ICP备20009057号
@@ -766,6 +828,7 @@ ipshu.com # 鄂B2-20110095-1
 ipshudi.com # IP属地查询
 itdog.cn # itdog网站工具箱
 rdnsdb.com # 闽ICP备15009794号
+tol.vip # 沪ICP备2022013949号-3
 webmasterhome.cn # 站长之家
 
 # 主页导航
@@ -774,6 +837,10 @@ webmasterhome.cn # 站长之家
 zhuye.kim
 ## 乐游导航主页
 6-u.com
+## 磁力搜索
+cilisouou.com
+jigecili.com
+wsjqnmmrmv.world
 ## imsYY起始页
 imsyy.com
 ## Infinity Pro
@@ -827,7 +894,6 @@ ycrx360.com
 1zhe.com
 2265.com
 2288.org
-2345.com
 258.com
 263.net
 289.com
@@ -898,6 +964,7 @@ ycrx360.com
 8264.com
 84399.com
 885.com
+8m2.net
 900.la
 900cha.com # 冀ICP备2024081752号-2
 917.com
@@ -1093,7 +1160,6 @@ downcc.com
 downxia.com
 downyi.com
 dreams-travel.com
-drivergenius.com
 duomai.com
 duoshuo.com
 duote.com
@@ -1108,7 +1174,6 @@ easiu.com
 eastsoo.com
 eayyou.com
 ebico.com
-ebrun.com
 ecjobhome.com
 eeyy.com
 eflycloud.com
@@ -1149,6 +1214,7 @@ gdliontech.com
 gdrc.com
 geektool.top # 极客Tool 蜀ICP备2024086015号-2
 gezida.com
+gifpay.com # 苏ICP备2021037684号-1
 globrand.com
 gm86.com
 gmz88.com
@@ -1210,6 +1276,7 @@ hongsanban.com
 hongyuanqh.com
 houdao.com
 houyuantuan.com
+hprtupgrade.com # 闽ICP备17017244号-4
 hteacher.net
 huashengdaili.com
 huize.com
@@ -1232,8 +1299,10 @@ im-cc.com
 imacos.top # 黑苹果屋 滇ICP备20000138号-1
 imgcdc.com
 imooc.com
+indeedpower.com # 沪ICP备17014357号-3
 indienova.com
 infini-fantasy.com # 沪ICP备2025147287号-3
+iposl.com # 冀ICP备2025135750号-4
 iranshao.com
 irs01.com
 istoreos.com # 粤ICP备20024441号-9
@@ -1246,6 +1315,7 @@ iyunmu.com
 jb51.com
 jb51.net
 jduoduo.com # 粤ICP备2022046650号-1
+jfcoop.com
 jiameng.com
 jianbihua.com
 jiangningwater.com # 苏ICP备11072203号-1
@@ -1268,7 +1338,6 @@ jkbl.com
 job5588.com
 job910.com
 jobjm.com
-jsj.top # 陕ICP备19008575号-13
 jsrdgg.com
 jsyks.com
 juefeng.com
@@ -1294,11 +1363,9 @@ kouclo.com
 koudai.com
 koudai8.com
 kq7.com
-ksord.com
 kuaaa.com
 kuaihou.com
 kuaiji.com
-kuaizhan.com
 kuqin.com
 kuyiso.com
 lady8844.com
@@ -1455,6 +1522,7 @@ qudong.com
 qugame.com
 qunjielong.com # 桂ICP备14006138号-2
 rockyenglish.com
+rrmj.plus
 rtbasia.com
 ruan8.com
 ruiwen.com
@@ -1527,6 +1595,8 @@ tao123.com
 taoche.com
 te5.com
 tenxcloud.com
+tggfl.com # 粤ICP备20037988号-1
+thispx.com # 粤ICP备2021020067号-2
 thmnet.com # 粤ICP备10240765号-2
 tianlailive.com
 tianlala.com
@@ -1538,6 +1608,7 @@ tingyun.com
 titanar.com
 tjjt360.com
 tmcdn.net
+tmwanba.com # 渝ICP备20006035号-4
 tobosu.com
 tom.com
 tongdun.net
@@ -1577,6 +1648,7 @@ vic18.com
 videojj.com
 vobao.com
 vpgame.com
+vpsvs.com # 沪ICP备2022013949号-4 VPS测评网
 wangyangyang.vip
 wannianli8.com
 wanplus.com
@@ -1587,6 +1659,7 @@ warmheart.top # 苏ICP备16016970号-1
 wdzj.com
 weand.com
 weavatar.com
+webportal.top
 weicaifu.com
 weilaicaijing.com
 weixing.com
@@ -1673,7 +1746,6 @@ yinyuetai.com
 yinzhaowang.com
 yiqifa.com
 yiqifa.org
-yisu.com
 yitaifang.com
 yiwan.com
 yixi.tv
@@ -1741,35 +1813,29 @@ zuhaowan.com
 zysou.com # 苏ICP备2024112174号-1
 zztfly.com
 
-# 建始网 鄂ICP备05004864号-1
-jsw118.com
-
-# 陕西城乡劳动就业网 陕ICP备19016945号-1
-sxcxldjy.com
-
-# 陕西建筑资质代办 陕ICP备17011269号
-shanxijianzhuzizhi.com
-
-# 纬横数据 鲁ICP备17051601号-1
-vhengdata.com
+# 布丁猫(岩池科技)
+bdcat.top # 黑ICP备2022002729号-2
+bdmozon.com # 黑ICP备2024018807号-1
 
 # 湖南智擎科技有限公司
 educoder.net
-tokcoder.com
+proj101.cn
 trustie.net
 
-# 浙江御鹿电子科技有限公司 麦瑞克健身设备 & 超燃脂APP 浙ICP备2021003090号-2
-merach.com
-
-# 珠海太川云社区技术股份有限公司 粤ICP备10213128号
-taichuan.com
-taichuan.net
+# 广州市雅望互联网服务有限公司
+gzyowin.com
 
 # 北京鸿合智能系统股份有限公司
 hitevision-solutions.com
 
 # 捷顺科技
 jslife.net
+
+# 建始网 鄂ICP备05004864号-1
+jsw118.com
+
+# 浙江御鹿电子科技有限公司 麦瑞克健身设备 & 超燃脂APP 浙ICP备2021003090号-2
+merach.com
 
 # 南海控股有限公司
 nanhaicorp.com
@@ -1781,25 +1847,24 @@ ozonabc.com
 qingping.co
 cleargrass.com
 
-# 布丁猫(岩池科技)
-# 黑ICP备2024018807号
-bdmozon.com
-bdmyandex.com
-# 黑ICP备2022002729号
-bdcat.top
-puddingcat.top
-
 # 海南东勤网络科技有限公司 琼ICP备18003843号
 qunliao.info
 
-# 陕ICP备2024035828号
-ao-x.ac.cn
+# 陕西建筑资质代办 陕ICP备17011269号
+shanxijianzhuzizhi.com
+
+# 陕西城乡劳动就业网 陕ICP备19016945号-1
+sxcxldjy.com
+
+# 珠海太川云社区技术股份有限公司 粤ICP备10213128号
+taichuan.com
+taichuan.net
+
+# 纬横数据 鲁ICP备17051601号-1
+vhengdata.com
 
 # 万集科技 京ICP备18036282号-2
 wanji.net.cn
-
-# 广州市雅望互联网服务有限公司
-gzyowin.com
 
 # 杭州烨彬科技有限公司 浙ICP备2024084590号
 yebinnet.com
