@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-06-30T21:51:48.457Z
-# Size: 4533
+# Last Updated: 2026-07-10T13:25:49.221Z
+# Size: 4548
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -768,6 +768,7 @@ full:s3.doujin.sh
 full:sdk.gleap.io
 full:sdk.split.io
 sitescdn.net
+full:sm.pcmag.com
 smassets.net
 smushcdn.com
 stapecdn.com
@@ -1017,6 +1018,7 @@ full:r2.dejavu.moe
 full:r2cdn.c7d.dev
 randomuser.me
 rawgithub.com
+full:rdr.windy.com
 runkitcdn.com
 s-nbcnews.com
 full:s.abcnews.com
@@ -1034,6 +1036,7 @@ shortpixel.ai
 skyearth8.xyz
 smmallcdn.net
 full:sp.replit.com
+squarecdn.com
 ss-domain.com
 full:st6-20.vk.com
 stackblitz.io
@@ -1093,6 +1096,7 @@ full:assets.garr.it
 assets.ibm.com
 full:assets.msn.com
 full:assets.orz.uno
+full:assets.pscp.tv
 full:b.manufact.com
 bestjavcdn.com
 boomio-cdn.com
@@ -1107,11 +1111,13 @@ full:c5.patreon.com
 full:c6.patreon.com
 full:c7.patreon.com
 full:c8.patreon.com
+full:cdn-o.suno.com
 cdn-spurit.com
 full:cdn.affine.pro
 full:cdn.aimerce.ai
 full:cdn.arduino.cc
 full:cdn.builder.io
+full:cdn.candid.org
 full:cdn.channel.io
 full:cdn.concert.io
 cdn.cwinfo.net
@@ -1142,6 +1148,7 @@ cdn.pubnub.com
 full:cdn.redhat.com
 full:cdn.redwap.xyz
 cdn.replit.com
+full:cdn.scalar.com
 full:cdn.seondf.com
 full:cdn.setapp.com
 full:cdn.sketch.com
@@ -1451,6 +1458,7 @@ full:cdn.javmiku.com
 full:cdn.jetboost.io
 full:cdn.jolipage.co
 full:cdn.mathjax.org
+full:cdn.mcp-use.com
 full:cdn.mercury.com
 full:cdn.metadata.io
 full:cdn.moeload.com
@@ -1927,6 +1935,7 @@ kinja-static.com
 larksuitepkg.com
 full:launcher.spot.im
 full:lm.visualon.info
+full:magic.scalar.com
 mangadex.network
 full:maps.gstatic.com
 full:maps.wplace.live
@@ -2428,12 +2437,14 @@ full:assets.onestore.ms
 full:assets.ontrack.com
 full:assets.pingone.com
 full:assets.porndig.com
+full:assets.ryanair.com
 full:assets.st-note.com
 full:assets.vidyard.com
 full:assets.zendesk.com
 full:assetscdn.jable.tv
 full:avatar.freepik.com
 full:avatars.micro.blog
+full:b2b-contenthub.com
 b2c-contenthub.com
 full:badges.crowdin.net
 betterstackcdn.com
@@ -3768,6 +3779,7 @@ full:ca2.onlyhentaistuff.com
 cas-bridge.xethub.hf.co
 full:cdn-app.pathfactory.com
 full:cdn-assets.circleci.com
+full:cdn-assets.hinative.com
 full:cdn-eu.dynamicyield.com
 full:cdn-images-1.medium.com
 full:cdn-static-1.medium.com
@@ -3980,6 +3992,7 @@ full:media.nbcconnecticut.com
 full:media.telanganatoday.com
 full:melonbooks.akamaized.net
 full:micro.rubiconproject.com
+full:pha-prx.ops.cloud.nx.app
 full:photos5.appleinsider.com
 full:platforms.makemytrip.com
 full:prod-images.rippling.com
@@ -4056,6 +4069,7 @@ full:form-assets.mailchimp.com
 full:gibs-c.earthdata.nasa.gov
 full:global-assets.fitch.group
 full:gn-web-assets.api.bbc.com
+full:hls-svod.itunes.apple.com
 full:hub-assets.displaycal.net
 full:hv-monsterdb-data.skk.moe
 full:im.np-payment-gateway.com
@@ -4393,6 +4407,7 @@ firebasestorage.googleapis.com
 full:identity-assets.getpostman.com
 full:image.email.microsoftemail.com
 full:learn-attachment.microsoft.com
+full:legacy-us-images.foundryco.app
 full:loader.mantis-intelligence.com
 full:next-images.opencollective.com
 full:nodebox-runtime.codesandbox.io
