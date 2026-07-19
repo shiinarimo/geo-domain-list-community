@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-07-13T06:30:02.736Z
-# Size: 4552
+# Last Updated: 2026-07-18T20:11:19.214Z
+# Size: 4551
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -73,7 +73,6 @@ full:i.gzn.jp
 full:i.ibb.co
 full:i.vgy.me
 full:icons.ly
-full:img.m.mw
 jspm.dev
 jspm.org
 loli.net
@@ -286,6 +285,7 @@ imaged.top
 imagee.top
 imagef.top
 imageg.top
+full:img.aso.fr
 img.gmo.jp
 full:img.reg.ru
 full:img.xjh.me
@@ -650,6 +650,7 @@ cloudlin.vip
 corsproxy.io
 crossbell.io
 full:css.4jpg.top
+full:data.peer.as
 full:david-dm.org
 dditsadn.com
 dditscdn.com
@@ -766,7 +767,6 @@ full:s1.bycsi.com
 full:s1.qwant.com
 full:s2.qwant.com
 full:s3.arkjp.net
-full:s3.doujin.sh
 full:sdk.gleap.io
 full:sdk.split.io
 sitescdn.net
@@ -1171,6 +1171,7 @@ full:cdn.zapier.com
 full:cdn.zeabur.com
 full:cdn1.plesk.com
 full:cdn2.auth0.com
+full:cdn2.cameo.com
 cdnclouder.com
 full:cdns.gigya.com
 full:cdp.sph.com.sg
@@ -1237,7 +1238,6 @@ full:images.spot.im
 full:images.wsj.net
 imagetwist.com
 full:img.321cdn.com
-full:img.bttimg.com
 full:img.decrypt.co
 full:img.fzf404.art
 full:img.icons8.com
@@ -1323,6 +1323,9 @@ report-uri.com
 full:res.abc.net.au
 full:res.garmin.com
 full:rt.rtoaster.jp
+full:rt1.maphub.net
+full:rt2.maphub.net
+full:rt3.maphub.net
 full:s.midishow.net
 full:s1.divhunt.com
 full:s3.2233778.xyz
@@ -1811,6 +1814,7 @@ full:cdn.playwire.com
 full:cdn.roboflow.com
 full:cdn.roseperl.com
 full:cdn.scaleflex.it
+full:cdn.seedance2.ai
 cdn.signalfx.com
 full:cdn.simplesat.io
 full:cdn.skymavis.com
@@ -1909,7 +1913,6 @@ full:img.olympics.com
 img.sooplive.com
 full:img.sparemin.com
 full:img.wikiwand.com
-full:img2.javdove.com
 full:img2.javmost.com
 full:img2.tnaflix.com
 full:img3.javmost.com
@@ -2171,7 +2174,6 @@ full:cdn.travis-ci.org
 full:cdn.ttgtmedia.com
 full:cdn.up-timely.com
 full:cdn.yinghuazy.xyz
-full:cdn.zhujiwiki.com
 full:cdn0.techbang.com
 full:cdn1.airdroid.com
 full:cdn1.edgedatg.com
@@ -2273,7 +2275,6 @@ full:images.vexels.com
 img.haiwaikan.com
 full:img.imoutomoe.net
 full:img.picacomic.com
-full:img.represent.com
 full:img.riskified.com
 full:img2.gelbooru.com
 full:img3.airdroid.com
@@ -2371,6 +2372,7 @@ full:static.gmgard.com
 full:static.guim.co.uk
 full:static.hotjar.com
 full:static.linear.app
+full:static.maphub.net
 static.mega.co.nz
 full:static.meiguo.com
 full:static.missav.com
@@ -3424,7 +3426,6 @@ full:images.emojiterra.com
 full:images.en.aptoide.com
 full:images.everyplate.com
 full:images.findagrave.com
-full:images.freeimages.com
 images.hentaicity.com
 full:images.icon-icons.com
 full:img.foresightnews.pro
@@ -3507,7 +3508,6 @@ full:static.buydomains.com
 static.chaosgroup.com
 full:static.chessarena.com
 full:static.clips4sale.com
-full:static.freeimages.com
 full:static.getpostman.com
 full:static.mytonwallet.io
 full:static.openreplay.com
@@ -3704,6 +3704,7 @@ full:static.foxbusiness.com
 full:static.fundraiseup.com
 full:static.gettyimages.com
 full:static.hugedomains.com
+full:static.istockphoto.com
 full:static.playstation.com
 full:static.staff-start.com
 full:static.telegraph.co.uk
@@ -3725,6 +3726,7 @@ tile.openstreetmap.org
 tile.thunderforest.com
 full:tile2.opencyclemap.org
 full:tiles.arcticconnect.ca
+tiles.openstreetmap.us
 tiles.virtualearth.net
 full:tileserver.memomaps.de
 full:tn.tubepornclassic.com
@@ -4054,7 +4056,6 @@ full:cdn.accounts.autodesk.com
 full:cdn.accounts.nintendo.com
 full:cdn.privacy.paramount.com
 full:cdn.registerdisney.go.com
-full:cdn.scripts.wtwhmedia.com
 full:changelog-widget.canny.io
 full:chunk-composing.canva.com
 full:components.justanswer.com
@@ -4107,7 +4108,6 @@ smartscreen.microsoft.com
 full:snyk-widget.herokuapp.com
 full:socialpic.video.friday.tw
 full:static-ca-cdn.eporner.com
-full:static-cdn.bytegiftia.top
 full:static-files.bitchute.com
 full:static-images.aptoide.com
 full:static-sg-cdn.eporner.com
@@ -4509,7 +4509,6 @@ full:screenshots.downloadtorrentfile.com
 full:static-assets-prod.unrealengine.com
 full:stubdownloader.services.mozilla.com
 full:cf-images.us-east-1.prod.boltdns.net
-full:chatwidgetmetrics-proxy.usepylon.com
 full:content-prod-live.cert.starbucks.com
 crashlyticsreports-pa.googleapis.com
 full:firebaseinstallations.googleapis.com
