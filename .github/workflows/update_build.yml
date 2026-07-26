@@ -156,229 +156,251 @@ jobs:
         run: |
           xz -z -9 -k dlc.dat
           sha256sum dlc.dat.xz > dlc.dat.xz.sha256sum
-
-      # 将输出的列表转换为 Clash classical 规则，并提取包含 @cn 的规则到单独的 @cn 文件 
+# 将输出的列表转换为 Clash classical 规则，并提取包含 @cn 的规则到单独的 @cn 文件
       - name: Convert geosite rules to Clash classical rules and extract @cn rules
         shell: bash
         run: |
           set -euo pipefail
 
-              mapfile -t files < <(find . -type f -name "*.txt" ! -name "*@cn.txt")
+          mapfile -t files < <(find . -type f -name "*.txt" ! -name "*@cn.txt")
 
-              for file in "${files[@]}"; do
-                if [ ! -f "$file" ]; then
-                  echo "Skip: $file not found"
-                  continue
-                fi
+          for file in "${files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Skip: $file not found"
+              continue
+            fi
 
-                dir="$(dirname "$file")"
-                filename="$(basename "$file")"
-                stem="${filename%.txt}"
-                cn_file="${dir}/${stem}@cn.txt"
+            dir="$(dirname "$file")"
+            filename="$(basename "$file")"
+            stem="${filename%.txt}"
+            cn_file="${dir}/${stem}@cn.txt"
 
-                tmp_all="$(mktemp)"
-                tmp_cn="$(mktemp)"
+            tmp_all="$(mktemp)"
+            tmp_cn="$(mktemp)"
 
-                echo "Processing: $file"
+            echo "Processing: $file"
 
-                awk -v all="$tmp_all" -v cn="$tmp_cn" '
-                  function trim(s) {
-                    gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
-                    return s
+            # Clash 规则集合文件的第一行固定为 payload:
+            printf '%s\n' 'payload:' > "$tmp_all"
+
+            awk -v all="$tmp_all" -v cn="$tmp_cn" '
+              function trim(s) {
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
+                return s
+              }
+
+              function has_cn_tag(s, t, n, arr, i) {
+                t = s
+
+                # 把常见分隔符都改成空格。
+                # 这样：
+                # example.com:@ads,@cn
+                # example.com @ads @cn
+                # example.com:@cn
+                # 都能变成独立字段 @cn。
+                gsub(/[,:[:space:]]+/, " ", t)
+
+                n = split(t, arr, /[[:space:]]+/)
+
+                for (i = 1; i <= n; i++) {
+                  if (arr[i] == "@cn") {
+                    return 1
+                  }
+                }
+
+                return 0
+              }
+
+              function clean_tags(s) {
+                s = trim(s)
+
+                # 删除所有 tag，包括：
+                # @cn
+                # @!cn
+                # @ads
+                # @ad
+                #
+                # 覆盖这些形式：
+                # example.com @ads @cn
+                # example.com:@ads,@cn
+                # example.com:@!cn,@ads
+                # domain:example.com:@cn
+                # DOMAIN-SUFFIX,example.com:@ads,@cn
+                #
+                # 先把以 空格/冒号/逗号 开头的 tag 整段删掉。
+                while (s ~ /(^|[[:space:]:,])@!?[A-Za-z0-9_.-]+/) {
+                  gsub(/(^|[[:space:]:,])@!?[A-Za-z0-9_.-]+/, "", s)
+                }
+
+                # 清理可能残留的分隔符
+                gsub(/[[:space:]]+/, " ", s)
+                gsub(/[[:space:]]*,[[:space:]]*/, ",", s)
+                gsub(/[[:space:]]*:[[:space:]]*/, ":", s)
+
+                # 删除末尾残留的逗号或冒号
+                sub(/[,:]+$/, "", s)
+
+                return trim(s)
+              }
+
+              function first_field_after_comma(s, pos, rest, arr) {
+                pos = index(s, ",")
+
+                if (pos == 0) {
+                  return ""
+                }
+
+                rest = substr(s, pos + 1)
+
+                # 注意：这里不要在清理 tag 前 split 逗号。
+                # 因为 @cn 可能在逗号后面。
+                # 先统一清理 tag。
+                rest = clean_tags(rest)
+
+                split(rest, arr, ",")
+
+                return trim(arr[1])
+              }
+
+              function convert(original, raw, value, rule_type, pos) {
+                raw = trim(original)
+
+                if (raw == "") {
+                  return ""
+                }
+
+                # Clash classical 格式
+                if (raw ~ /^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-REGEX),/) {
+                  pos = index(raw, ",")
+                  rule_type = substr(raw, 1, pos - 1)
+                  value = first_field_after_comma(raw)
+
+                  if (value == "") {
+                    return ""
                   }
 
-                  function has_cn_tag(s, t, n, arr, i) {
-                    t = s
+                  return rule_type "," value
+                }
 
-                    # 把常见分隔符都改成空格。
-                    # 这样：
-                    # example.com:@ads,@cn
-                    # example.com @ads @cn
-                    # example.com:@cn
-                    # 都能变成独立字段 @cn。
-                    gsub(/[,:[:space:]]+/, " ", t)
+                raw = clean_tags(raw)
 
-                    n = split(t, arr, /[[:space:]]+/)
+                if (raw == "") {
+                  return ""
+                }
 
-                    for (i = 1; i <= n; i++) {
-                      if (arr[i] == "@cn") {
-                        return 1
-                      }
-                    }
+                if (raw ~ /^domain:/) {
+                  value = raw
+                  sub(/^domain:/, "", value)
+                  value = clean_tags(value)
 
-                    return 0
+                  if (value == "") {
+                    return ""
                   }
 
-                  function clean_tags(s) {
-                    s = trim(s)
+                  return "DOMAIN-SUFFIX," value
+                }
 
-                    # 删除所有 tag，包括：
-                    # @cn
-                    # @!cn
-                    # @ads
-                    # @ad
-                    #
-                    # 覆盖这些形式：
-                    # example.com @ads @cn
-                    # example.com:@ads,@cn
-                    # example.com:@!cn,@ads
-                    # domain:example.com:@cn
-                    # DOMAIN-SUFFIX,example.com:@ads,@cn
-                    #
-                    # 先把以 空格/冒号/逗号 开头的 tag 整段删掉。
-                    while (s ~ /(^|[[:space:]:,])@!?[A-Za-z0-9_.-]+/) {
-                      gsub(/(^|[[:space:]:,])@!?[A-Za-z0-9_.-]+/, "", s)
-                    }
+                if (raw ~ /^full:/) {
+                  value = raw
+                  sub(/^full:/, "", value)
+                  value = clean_tags(value)
 
-                    # 清理可能残留的分隔符
-                    gsub(/[[:space:]]+/, " ", s)
-                    gsub(/[[:space:]]*,[[:space:]]*/, ",", s)
-                    gsub(/[[:space:]]*:[[:space:]]*/, ":", s)
-
-                    # 删除末尾残留的逗号或冒号
-                    sub(/[,:]+$/, "", s)
-
-                    return trim(s)
+                  if (value == "") {
+                    return ""
                   }
 
-                  function first_field_after_comma(s, pos, rest, arr) {
-                    pos = index(s, ",")
-                    if (pos == 0) {
-                      return ""
-                    }
+                  return "DOMAIN," value
+                }
 
-                    rest = substr(s, pos + 1)
+                if (raw ~ /^regexp:/) {
+                  value = raw
+                  sub(/^regexp:/, "", value)
+                  value = clean_tags(value)
 
-                    # 注意：这里不要在清理 tag 前 split 逗号。
-                    # 因为 @cn 可能在逗号后面。
-                    # 先统一清理 tag。
-                    rest = clean_tags(rest)
-
-                    split(rest, arr, ",")
-
-                    return trim(arr[1])
+                  if (value == "") {
+                    return ""
                   }
 
-                  function convert(original, raw, value, rule_type, pos) {
-                    raw = trim(original)
+                  return "DOMAIN-REGEX," value
+                }
 
-                    if (raw == "") {
-                      return ""
-                    }
+                value = clean_tags(raw)
 
-                    # Clash classical 格式
-                    if (raw ~ /^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-REGEX),/) {
-                      pos = index(raw, ",")
-                      rule_type = substr(raw, 1, pos - 1)
-                      value = first_field_after_comma(raw)
+                if (value == "") {
+                  return ""
+                }
 
-                      if (value == "") {
-                        return ""
-                      }
+                return "DOMAIN-SUFFIX," value
+              }
 
-                      return rule_type "," value
-                    }
+              {
+                original = $0
 
-                    raw = clean_tags(raw)
+                # 跳过已经存在的 payload: 头部，
+                # 这样重复运行 GitHub Actions 时不会重复写入。
+                if (original ~ /^[[:space:]]*payload:[[:space:]]*$/) {
+                  next
+                }
 
-                    if (raw == "") {
-                      return ""
-                    }
+                # 兼容已经生成过的 Clash YAML 列表格式，
+                # 删除每行开头的 "- "。
+                sub(/^[[:space:]]*-[[:space:]]+/, "", original)
 
-                    if (raw ~ /^domain:/) {
-                      value = raw
-                      sub(/^domain:/, "", value)
-                      value = clean_tags(value)
+                # 先判断原始整行是否有正向 @cn。
+                # @!cn 不算 @cn。
+                is_cn = has_cn_tag(original)
 
-                      if (value == "") {
-                        return ""
-                      }
+                converted = convert(original)
 
-                      return "DOMAIN-SUFFIX," value
-                    }
+                # 输出调试信息，方便排查问题。只输出包含 @ 的行，其他行不输出。
+                # if (original ~ /@/) {
+                #   print "TAG-LINE:", original > "/dev/stderr"
+                #   print "IS-CN:", is_cn > "/dev/stderr"
+                #   print "CONVERTED:", converted > "/dev/stderr"
+                # }
 
-                    if (raw ~ /^full:/) {
-                      value = raw
-                      sub(/^full:/, "", value)
-                      value = clean_tags(value)
-
-                      if (value == "") {
-                        return ""
-                      }
-
-                      return "DOMAIN," value
-                    }
-
-                    if (raw ~ /^regexp:/) {
-                      value = raw
-                      sub(/^regexp:/, "", value)
-                      value = clean_tags(value)
-
-                      if (value == "") {
-                        return ""
-                      }
-
-                      return "DOMAIN-REGEX," value
-                    }
-
-                    value = clean_tags(raw)
-
-                    if (value == "") {
-                      return ""
-                    }
-
-                    return "DOMAIN-SUFFIX," value
+                if (converted != "") {
+                  if (!(converted in seen_all)) {
+                    # 每条规则前加 "- "
+                    print "- " converted >> all
+                    seen_all[converted] = 1
                   }
 
-                  {
-                    original = $0
-
-                    # 先判断原始整行是否有正向 @cn。
-                    # @!cn 不算 @cn。
-                    is_cn = has_cn_tag(original)
-
-                    converted = convert(original)
-
-
-                    # 输出调试信息，方便排查问题。只输出包含 @ 的行，其他行不输出。
-                    # if (original ~ /@/) {
-                    #   print "TAG-LINE:", original > "/dev/stderr"
-                    #   print "IS-CN:", is_cn > "/dev/stderr"
-                    #   print "CONVERTED:", converted > "/dev/stderr"
-                    # }
-
-                    if (converted != "") {
-                      if (!(converted in seen_all)) {
-                        print converted >> all
-                        seen_all[converted] = 1
-                      }
-
-                      if (is_cn && !(converted in seen_cn)) {
-                        print converted >> cn
-                        seen_cn[converted] = 1
-                      }
+                  if (is_cn && !(converted in seen_cn)) {
+                    # 只有发现第一条有效的 @cn 规则时，
+                    # 才向 @cn 文件写入 payload:。
+                    if (!cn_header_written) {
+                      print "payload:" >> cn
+                      cn_header_written = 1
                     }
+
+                    # @cn 文件中的每条规则同样加 "- "
+                    print "- " converted >> cn
+                    seen_cn[converted] = 1
                   }
-                ' "$file"
+                }
+              }
+            ' "$file"
 
-                mv "$tmp_all" "$file"
+            mv "$tmp_all" "$file"
 
-                if [ -s "$tmp_cn" ]; then
-                  mv "$tmp_cn" "$cn_file"
-                  echo "Created: $cn_file"
-                else
-                  rm -f "$tmp_cn"
+            if [ -s "$tmp_cn" ]; then
+              mv "$tmp_cn" "$cn_file"
+              echo "Created: $cn_file"
+            else
+              rm -f "$tmp_cn"
 
-                  if [ -f "$cn_file" ]; then
-                    rm -f "$cn_file"
-                    echo "Removed stale empty @cn file: $cn_file"
-                  else
-                    echo "No @cn rules found, skip creating: $cn_file"
-                  fi
-                fi
+              if [ -f "$cn_file" ]; then
+                rm -f "$cn_file"
+                echo "Removed stale empty @cn file: $cn_file"
+              else
+                echo "No @cn rules found, skip creating: $cn_file"
+              fi
+            fi
 
-                echo "Updated: $file"
-              done
+            echo "Updated: $file"
+          done
+
 
 
       - name: Git push assets to "release" branch
