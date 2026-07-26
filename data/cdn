@@ -1,7 +1,7 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-07-18T20:11:19.214Z
-# Size: 4551
+# Last Updated: 2026-07-21T16:18:25.336Z
+# Size: 4555
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -988,6 +988,7 @@ full:js.prosopo.io
 full:js.pusher.com
 full:js.stripe.com
 full:js.upscope.io
+full:kh.google.com
 kinja-img.com
 klarnacdn.net
 line-scdn.net
@@ -2054,6 +2055,7 @@ tiles.freemap.sk
 tiles.mapbox.com
 full:tiles.planet.com
 full:tiles.strava.com
+full:tiles.zoom.earth
 full:time.windows.com
 full:townsquare.media
 trackerslist.com
@@ -2516,6 +2518,7 @@ full:cdnapi.kaltura.com
 full:cdni.iconscout.com
 full:cdnstatic.w1mp.com
 cms-cdn.linear.app
+full:code.trygravity.ai
 colliderimages.com
 full:content.arduino.cc
 full:content.gapinc.com
@@ -3485,6 +3488,7 @@ full:sig.grumpybumpers.com
 full:siloh-ns1.plutotv.net
 full:speedmedia2.jfrog.com
 ssl-images-amazon.com
+full:st3.depositphotos.com
 full:start-page.buffer.com
 full:static-1.bitchute.com
 full:static-2.bitchute.com
