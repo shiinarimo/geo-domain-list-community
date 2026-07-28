@@ -5,6 +5,7 @@ include:hoyoverse
 include:nikke
 include:bluearchive
 include:projectsekai
+include:dmm
 
 # idolmaster
 agrmt.channel.or.jp
@@ -31,9 +32,13 @@ heytapmobi.com
 craftegg.jp
 
 # dmmgames  
-dmmgames.com
-games.dmm.co.jp
-games.dmm.com
+# dmmgames.com
+# games.dmm.co.jp
+# games.dmm.com
+# dmm.co.jp
+# clt.ixd.dmm.com
+
+
 # ドルフィンウェーブ（test）
 marv-games.jp
 # dmm マギアレコード（test）
