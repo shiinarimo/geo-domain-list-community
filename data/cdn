@@ -1,6 +1,6 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-08-14T12:22:28.498Z
+# Last Updated: 2026-08-21T08:17:07.730Z
 # Size: 4627
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -8,7 +8,7 @@
 #
 # This file contains object storage and static assets CDN domains.
 #
-# $content-hash-v1$:wLWHqOEcP7nENRf_7nDHBku3bzDKqXKADq-g5eHNaxU$
+# $content-hash-v1$:md7bTZxXFwHqlaZjUmGv70PWBy1FtwK0W9XMbDY_ngs$
 #########################################
 full:7h15.ru1353t.1s.m4d3.by.5ukk4w.skk.moe
 full:0x0.st
@@ -553,7 +553,6 @@ reactjs.org
 full:s.gishan.cc
 full:s.imgur.com
 full:s.plurk.com
-full:s3.aaaaa.io
 full:s3.masto.ai
 skypack.dev
 smilecdn.co
@@ -1480,6 +1479,7 @@ full:cdn.iporntv.net
 full:cdn.javmiku.com
 full:cdn.jetboost.io
 full:cdn.jolipage.co
+full:cdn.leonardo.ai
 full:cdn.mathjax.org
 full:cdn.mcp-use.com
 full:cdn.mercury.com
@@ -1566,6 +1566,7 @@ firebaseapp.com
 fontawesome.com
 full:fonts.bunny.net
 full:fonts.gishan.cc
+full:fonts.reown.com
 full:fonts.upset.dev
 full:fonts.wd40.info
 gannett-cdn.com
@@ -1676,7 +1677,6 @@ full:sprig.figma.com
 full:ssl.gstatic.com
 stack.imgur.com
 stackassets.com
-full:static.bad.news
 full:static.blip.net
 full:static.fboom.me
 full:static.ietf.org
@@ -1812,6 +1812,7 @@ full:cdn.equalweb.com
 full:cdn.firebase.com
 full:cdn.foxycart.com
 full:cdn.getkoala.com
+full:cdn.getmerlin.in
 full:cdn.ghostery.com
 full:cdn.gofundme.com
 full:cdn.hashnode.com
@@ -2478,7 +2479,6 @@ full:assets.jolipage.co
 full:assets.mailgun.com
 full:assets.nflxext.com
 full:assets.nxtrace.org
-full:assets.onestore.ms
 full:assets.ontrack.com
 full:assets.pingone.com
 full:assets.porndig.com
@@ -2510,7 +2510,6 @@ full:cdn.boldmethod.com
 full:cdn.britannica.com
 full:cdn.bullwhip.cloud
 full:cdn.cmcmarkets.com
-full:cdn.commandbar.com
 full:cdn.contentful.com
 full:cdn.convertbox.com
 full:cdn.conveythis.com
@@ -3738,6 +3737,7 @@ full:promotions.betfair.com
 full:proxy.joinmastodon.org
 full:public.flourish.studio
 full:res-geo.cdn.office.net
+full:resource.logitechg.com
 full:resource.video.nimg.jp
 full:resources.allstate.com
 full:rv-assets.softonic.com
@@ -4172,6 +4172,7 @@ push.services.mozilla.com
 ravencoinipfs-gateway.com
 full:report-uri.cloudflare.com
 full:resource.tnlmediagene.com
+full:s3.beta.coinmarketcap.com
 full:scripts.scriptwrapper.com
 full:simplicity.trustpilot.com
 smartscreen.microsoft.com
@@ -4600,7 +4601,6 @@ full:cdn-yotpo-images-production.yotpo.com
 full:cdn.us-east-1.prod.moon.dubai.aws.dev
 content-storage-upload.googleapis.com
 full:firefox.settings.services.mozilla.com
-full:frames-commandbar-prod.commandbar.com
 full:frontend-apps-multi-region.workos.com
 full:pplx-next-static-public.perplexity.ai
 full:prod-packager-packages.codesandbox.io
