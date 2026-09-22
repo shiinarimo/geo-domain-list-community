@@ -1,14 +1,14 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-09-13T08:44:07.146Z
-# Size: 4662
+# Last Updated: 2026-09-21T05:44:58.421Z
+# Size: 4674
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
 #
 # This file contains object storage and static assets CDN domains.
 #
-# $content-hash-v1$:0REgA04OT3rxT4nEnw4jKXuYvLCgnj2q-fmOMFVDeTs$
+# $content-hash-v1$:ezVaWwPRWEw3JytRu-XThOtuxM9sOhne211P5MwAglw$
 #########################################
 full:7h15.ru1353t.1s.m4d3.by.5ukk4w.skk.moe
 full:0x0.st
@@ -356,6 +356,7 @@ sascdn.com
 sc-cdn.com
 scene7.com
 seecdn.com
+seecdn.net
 sftcdn.net
 shgcdn.com
 shields.io
@@ -573,7 +574,6 @@ full:th.bing.com
 full:tile.osm.be
 tile.osm.ch
 full:tn.vjav.com
-tripcdn.com
 ttcache.com
 full:turbo.build
 tutu1.space
@@ -995,6 +995,7 @@ ipfs.slang.cx
 itvstatic.com
 jdbstatic.com
 jisuimage.com
+full:js.arcgis.com
 full:js.klarna.com
 full:js.prosopo.io
 full:js.pusher.com
@@ -1373,6 +1374,7 @@ full:static.fc2.com
 full:static.itch.io
 full:static.j51.net
 full:static.lwn.net
+full:static.okou.io
 full:static.okx.cab
 full:static.okx.com
 full:static.reo.dev
@@ -1820,6 +1822,7 @@ full:cdn.dribbble.com
 cdn.easyling.com
 full:cdn.ecomm.ui.com
 full:cdn.equalweb.com
+full:cdn.eye-able.com
 full:cdn.firebase.com
 full:cdn.foxycart.com
 full:cdn.getkoala.com
@@ -1926,6 +1929,7 @@ images-iherb.com
 full:images.axios.com
 full:images.bfmtv.com
 full:images.drata.com
+full:images.hibob.com
 full:images.nebula.tv
 full:images.pling.com
 full:images.plurk.com
@@ -2195,6 +2199,7 @@ cdn.greenhouse.io
 full:cdn.growthbook.io
 full:cdn.headwayapp.co
 full:cdn.himetrica.com
+full:cdn.infrawire.net
 full:cdn.ipregistry.co
 full:cdn.jetphotos.com
 full:cdn.joinhoney.com
@@ -2607,6 +2612,7 @@ full:home.integrate.com
 full:icons.ferndocs.com
 full:icons.veryicon.com
 full:iframe.nbcnews.com
+full:image-tc.galaxy.tf
 full:image.jnislniv.xyz
 full:image.yuntu.com.tw
 full:image.yymanhua.com
@@ -3087,6 +3093,7 @@ full:thumbs.onlyfans.com
 full:thumbs2.sendvid.com
 full:tile2.intervals.icu
 full:tiles.mapillary.com
+full:tileserver.b10s.net
 full:time.cloudflare.com
 full:tuf-repo.github.com
 full:ui.contentstack.com
@@ -3607,6 +3614,7 @@ svbtleusercontent.com
 full:themes.fourthwall.com
 tile.openstreetmap.de
 tile.openstreetmap.fr
+full:tiles.flightaware.com
 full:tiles.openfreemap.org
 full:uploads.bikeindex.org
 full:uploads.sitepoint.com
@@ -3719,6 +3727,7 @@ full:images-assets.nasa.gov
 full:images.contentstack.io
 full:images.hothardware.com
 full:images.newrepublic.com
+full:images.radio-canada.ca
 full:images.socialblade.com
 full:images.wsjcommerce.net
 full:images.wurstclient.net
@@ -3754,6 +3763,7 @@ full:nodeassets.nbcnews.com
 packd.liuxingbaoyu.xyz
 full:parts.blog.livedoor.jp
 patreonusercontent.com
+full:photos.flightaware.com
 full:pic.onlinewebfonts.com
 full:pkg-cdn.jetbrains.team
 full:platform.instagram.com
@@ -3891,6 +3901,7 @@ full:cdn.prod.www.spiegel.de
 full:cdn.ready-market.com.tw
 cdn.survey.medallia.com
 full:cdn.worldvectorlogo.com
+full:cdn1.singteldigital.com
 full:cdnstatic.porno-cum.com
 full:cdnstatic.tencentcs.com
 full:cms.worldpokerdeals.com
@@ -3940,6 +3951,7 @@ full:mangaz-static.j-comi.jp
 full:media-cdn.atlassian.com
 full:media-cdn.epicgames.com
 full:media-cms.onesignal.com
+full:media-process.hibob.com
 full:media.contentapi.ea.com
 full:media.geeksforgeeks.org
 full:media.nbclosangeles.com
