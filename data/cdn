@@ -1,14 +1,14 @@
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-11-13T08:54:24.339Z
-# Size: 4701
+# Last Updated: 2026-11-27T12:05:50.057Z
+# Size: 4697
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
 #
 # This file contains object storage and static assets CDN domains.
 #
-# $content-hash-v1$:8Dku-E_OJ-NwQDXIcUvOWs4rsS0kfU4J0qlCnAnJKDc$
+# $content-hash-v1$:bIJlheVXZw172XtlpVmvyWWUG3pUNuHB-njQLUbaL_Q$
 #########################################
 full:7h15.ru1353t.1s.m4d3.by.5ukk4w.skk.moe
 full:0x0.st
@@ -1036,7 +1036,6 @@ picsum.photos
 place-hold.it
 full:pomf2.lain.la
 full:r2.dejavu.moe
-full:r2cdn.c7d.dev
 randomuser.me
 rawgithub.com
 rcsobjects.it
@@ -1353,7 +1352,6 @@ full:s1.divhunt.com
 full:s3.2233778.xyz
 sbcdnvideo.com
 full:scache.vzw.com
-full:scdn.clerk.com
 full:sdata.ndtv.com
 full:sdk.qikify.com
 sentry-cdn.com
@@ -1381,7 +1379,6 @@ full:static.reo.dev
 full:static.snyk.io
 full:static.toss.im
 full:static.xns.one
-full:static.yfsp.tv
 full:stc.utdstc.com
 sthlstatic.com
 full:stream.mux.com
@@ -1654,7 +1651,6 @@ net.anydesk.com
 nftstorage.link
 full:object.innei.in
 full:objects.hit.moe
-full:pacdn.500px.org
 parastorage.com
 full:pcz.javidol.org
 permaweb.eu.org
@@ -1885,7 +1881,6 @@ dc-telemetry.net
 directupload.net
 dockerstatic.com
 dreamscape.cloud
-full:drscdn.500px.org
 full:e.deviantart.net
 full:embed.lantern.io
 full:embed.reddit.com
@@ -2049,7 +2044,6 @@ s3.wasabisys.com
 full:s8.maxstream.org
 scribdassets.com
 full:sdk.customfit.ai
-full:segapi.clerk.com
 full:shots.codepen.io
 sny.monosnap.com
 full:static.arxiv.org
@@ -2662,6 +2656,7 @@ full:maps.wikimedia.org
 full:maptile.osmand.net
 full:media-cms.ayoba.me
 full:media.cgtrader.com
+full:media.datacamp.com
 full:media.flaticon.com
 full:media.formula1.com
 full:media.gamestop.com
@@ -2701,7 +2696,6 @@ full:proxy.spigotmc.org
 full:public.hare200.com
 full:public.popclip.app
 quip-marketing.com
-full:r2cdn.corespeed.io
 full:reader.readmoo.com
 full:registry.oomol.com
 replicate.delivery
@@ -3356,6 +3350,7 @@ full:static.grammarly.com
 full:static.helpjuice.com
 full:static.incapsula.com
 full:static.infomaniak.ch
+full:static.karousell.com
 full:static.macupdate.com
 full:static.mediafire.com
 full:static.meteoblue.com
@@ -3460,6 +3455,7 @@ full:cdn.freebiesupply.com
 full:cdn.heapanalytics.com
 full:cdn.joincommunity.xyz
 cdn.printfriendly.com
+full:cdn.protect.clerk.com
 full:cdn.prowritingaid.com
 full:cdn.shoppinggives.com
 full:cdn.simplelocalize.io
@@ -3484,7 +3480,6 @@ full:cdne-pics.youjizz.com
 full:cdnjs.betterstack.com
 chargebeestaticv2.com
 full:chat-assets.front.app
-claudeusercontent.com
 full:cloud.typenetwork.com
 cloud1.influxdata.com
 cloud2.influxdata.com
@@ -3554,7 +3549,6 @@ full:media.cleanshot.cloud
 full:media.games.dmm.co.jp
 full:media.gettyimages.com
 full:media.graphassets.com
-full:media.hentaifreak.org
 full:media.identity.ui.com
 full:media.invisioncic.com
 full:media.istockphoto.com
@@ -3886,7 +3880,6 @@ full:assets.clever-cloud.com
 full:assets.clickfunnels.com
 assets.digitalocean.com
 full:assets.lemonsqueezy.com
-full:assets.mcp.corespeed.io
 full:assets.science.nasa.gov
 full:assets.singaporeair.com
 full:assets.streamlinehq.com
@@ -4071,6 +4064,7 @@ full:axiecdn.axieinfinity.com
 full:brick.freetls.fastly.net
 buildkiteusercontent.com
 bundle.thimatic-apps.com
+butterfly-effect-cdn.dev
 full:cache.omnicalculator.com
 full:cdn-image01.casetify.com
 full:cdn-image02.casetify.com
@@ -4142,9 +4136,7 @@ full:segment.digitalocean.com
 full:service-icons.zeabur.com
 settings.crashlytics.com
 full:sf-coze-web-cdn.coze.com
-full:showcase.abovemarket.com
 full:sp-spiegel-de.spiegel.de
-full:spotlightimage.biggo.com
 full:static-assets.mapbox.com
 full:static-assets.vinted.com
 full:static-forms.klaviyo.com
@@ -4177,6 +4169,7 @@ full:app-static.sendsafely.com
 full:asset-cdn.uscardforum.com
 full:assets.map.brightcove.com
 full:assets.media-platform.com
+full:assets.monetizationos.com
 full:assets.openalternative.co
 assets.shortbread.aws.dev
 full:assets.squarewebsites.org
@@ -4268,7 +4261,6 @@ full:tiles.maps.opensearch.org
 full:trekcdnprod.azureedge.net
 full:tuf-repo-cdn.sigstore.dev
 full:ubistatic2-a.akamaihd.net
-full:unlimited-cdn.waifu2x.net
 full:vz-2222604c-50b.b-cdn.net
 full:vz-c0fe498e-5ab.b-cdn.net
 full:web-assets.esetstatic.com
@@ -4441,6 +4433,7 @@ agechecker-northern-apps.com
 agechecker.northern-apps.com
 applicationinsights.azure.cn
 full:assets-cdn.watchdisneyfe.com
+full:assets.claudeusercontent.com
 full:assets.positional-bucket.com
 full:assets4.mist-train-girls.com
 full:cdn-dynmedia-1.microsoft.com
@@ -4487,6 +4480,7 @@ full:static-oforms.onlyoffice.com
 static-prod-web.miniclip.com
 full:static-r.kamihimeproject.net
 full:static-secure-uploads.ui.com
+full:static.claudeusercontent.com
 full:static.community.workday.com
 full:static.edge.microsoftapp.net
 full:static2.sharepointonline.com
@@ -4495,6 +4489,7 @@ full:store-images.s-microsoft.com
 tunnels.api.visualstudio.com
 full:ui-statics-cf.streamable.com
 full:uos-support-files.svc.ui.com
+full:upload.claudeusercontent.com
 full:vsmarketplacebadge.apphb.com
 full:wctour-images.worldchess.com
 full:akamai-assets.squarespace.com
@@ -4582,6 +4577,7 @@ full:android-safebrowsing.google.com
 full:bookface-static.ycombinator.com
 full:brand-assets.cne.ngc.nvidia.com
 full:bunnycdn-video-assets.b-cdn.net
+full:cdn-resize-prod-com.500px.cloud
 full:cdn-widgetsrepository.yotpo.com
 full:cdn.playersupport.riotgames.com
 full:cdn.techcommunity.microsoft.com
