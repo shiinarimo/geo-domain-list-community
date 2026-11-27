@@ -27,6 +27,7 @@ include:github
 include:github1s
 include:gitlab
 include:golang
+include:grafanalabs
 include:hashicorp
 include:haskell
 include:homebrew
@@ -59,6 +60,8 @@ include:thelinuxfoundation
 include:tilda
 include:unity
 include:v8
+include:webflow
+include:wix
 include:wordpress
 
 adventofcode.com
@@ -66,9 +69,9 @@ almalinux.org
 alpinelinux.org
 apache.org
 artixlinux.org
-atom.io
 badgen.net
 bitvise.com
+bmonkeys.net
 bugsnag.com
 busybox.net
 centos.org
@@ -147,6 +150,7 @@ raspberrypi.org
 raspbian.org
 regex101.com
 remirepo.net
+replit.com
 rockylinux.org
 rpmfusion.org
 scientificlinux.org
@@ -159,13 +163,13 @@ system76.com
 tampermonkey.net
 termius.com
 topcoder.com
+tortoisegit.org
 unpkg.com
 videojs.com
 videolan.org
 vim.org
 wapm.io
 wasmer.io
-webflow.com
 weblate.org
 wireshark.org
 x.org
@@ -176,6 +180,8 @@ ziglang.org
 zsh.org
 
 # WordPress plugins
+boldgrid.com
+cloudwp.dev
 crocoblock.com
 elegantthemes.com
 hivepress.io

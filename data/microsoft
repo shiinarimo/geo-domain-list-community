@@ -204,6 +204,7 @@ msftconnecttest.com
 msfteducation.ca
 msftncsi.com
 msftnet.org
+msftstatic.com
 msgamesresearch.com
 msgamestudios.com
 mshome.net
@@ -306,6 +307,7 @@ yammer.com
 # CDN
 skype-edf.akadns.net
 skypedata.akadns.net
+full:aurora-customization-usw2.lithium.com
 full:img-prod-cms-rt-microsoft-com.akamaized.net
 full:img-s-msn-com.akamaized.net
 full:mwf-service.akamaized.net
@@ -373,6 +375,5 @@ full:surface.download.prss.microsoft.com @cn
 full:surface.downloads.prss.microsoft.com @cn
 full:vlportal.download.prss.microsoft.com @cn
 full:volic.download.prss.microsoft.com @cn
-full:vscode.download.prss.microsoft.com @cn
 full:vz.download.prss.microsoft.com @cn
 full:windbg.download.prss.microsoft.com @cn

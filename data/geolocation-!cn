@@ -3,7 +3,7 @@
 # AI Chat
 include:category-ai-!cn
 
-# Advertisment & Analytics
+# Advertisement & Analytics
 include:pubmatic
 include:taboola
 
@@ -103,8 +103,10 @@ include:zotero
 ankiuser.net
 ankiweb.net
 chemequations.com # 线上化学方程式！
+full:courses.myecnu.org # ECNU·课栈
 divdyn.com
 geogebra.org
+githubhelp.com
 wolframalpha.com
 
 # Entertainment & Games & Music & Podcasts & Videos
@@ -143,7 +145,7 @@ include:category-orgs
 # Porn
 include:category-porn
 
-# Services & Softwares
+# Services & Software
 include:category-android-app-download
 include:category-antivirus
 include:category-browser-!cn
@@ -230,7 +232,6 @@ include:tumblr
 include:tutanota
 include:twilio
 include:vercel
-include:wix
 include:zendesk
 include:zeplin
 include:zoho
